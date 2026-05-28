@@ -22,20 +22,18 @@ export default function Header() {
     >
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3 group">
-          <span className="relative w-14 h-14 flex items-center justify-center">
-            <span className="absolute inset-0 rounded-full bg-[#1F9A9A]/20 blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+          <span className="relative inline-flex items-center bg-white/95 rounded-full px-3 py-1.5 shadow-md group-hover:bg-white transition">
             <Image
-              src="/logo.png"
+              src="/logocertacr.png"
               alt={COMPANY.name}
-              width={56}
-              height={56}
-              className="relative w-14 h-14 object-contain"
+              width={240}
+              height={120}
+              className="h-8 sm:h-9 w-auto object-contain"
               priority
             />
           </span>
-          <span className="hidden sm:block leading-tight">
-            <span className="block text-sm font-medium tracking-tight">{COMPANY.short}</span>
-            <span className="block text-[10px] uppercase tracking-[0.2em] text-[#A6A29A]">Pinturas · est. {COMPANY.founded}</span>
+          <span className="hidden md:inline-block text-[10px] uppercase tracking-[0.2em] text-[#A6A29A] border-l border-[#2A2A2F] pl-3">
+            est. {COMPANY.founded}
           </span>
         </a>
 

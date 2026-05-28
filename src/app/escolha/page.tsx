@@ -91,11 +91,12 @@ export default function EscolhaPage() {
         />
         <div className="max-w-[1600px] mx-auto relative">
           <div className="flex items-center gap-3 mb-8 sm:mb-12">
-            <Image src="/logo.png" alt={COMPANY.name} width={56} height={56} className="w-12 h-12 sm:w-14 sm:h-14 object-contain" />
-            <div className="leading-tight">
-              <div className="text-sm font-medium">{COMPANY.short}</div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-[#A6A29A]">apresentação · privado</div>
-            </div>
+            <span className="inline-flex items-center bg-white/95 backdrop-blur rounded-full px-3 py-1.5 shadow-lg">
+              <Image src="/logocertacr.png" alt={COMPANY.name} width={240} height={120} className="h-9 sm:h-10 w-auto object-contain" priority />
+            </span>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#A6A29A] border-l border-[#2A2A2F] pl-3">
+              apresentação · privado
+            </span>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 lg:items-end">

@@ -37,12 +37,11 @@ function Header() {
     <header className="fixed top-0 inset-x-0 z-30 bg-[#0F2433]/90 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
         <Link href="/v3" className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-full bg-[#4FB8C9]/15 flex items-center justify-center ring-1 ring-[#4FB8C9]/30">
-            <Image src="/logo.png" alt={COMPANY.name} width={32} height={32} className="w-8 h-8 object-contain" />
-          </div>
-          <div className="hidden sm:block leading-tight">
-            <div className="text-sm font-semibold" style={{ fontFamily: "var(--font-inter-tight-v3)" }}>{COMPANY.short}</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-[#4FB8C9]/80">PT · desde {COMPANY.founded}</div>
+          <span className="inline-flex items-center bg-white rounded-md px-2.5 py-1.5">
+            <Image src="/logocertacr.png" alt={COMPANY.name} width={240} height={120} className="h-9 w-auto object-contain" priority />
+          </span>
+          <div className="hidden md:inline-flex items-center text-[10px] uppercase tracking-[0.2em] text-[#4FB8C9]/80 border-l border-white/15 pl-3">
+            desde {COMPANY.founded}
           </div>
         </Link>
         <nav className="hidden lg:flex items-center gap-8 text-sm">
@@ -336,14 +335,12 @@ function Footer() {
     <footer className="bg-[#0A1A26] py-16 border-t border-white/10">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 grid lg:grid-cols-3 gap-10">
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-full bg-[#4FB8C9]/15 flex items-center justify-center">
-              <Image src="/logo.png" alt={COMPANY.name} width={32} height={32} className="w-8 h-8 object-contain" />
-            </div>
-            <div>
-              <div className="text-base font-semibold" style={DISPLAY}>{COMPANY.short}</div>
-              <div className="text-[10px] uppercase tracking-widest text-[#4FB8C9]/80">desde {COMPANY.founded}</div>
-            </div>
+          <span className="inline-flex items-center bg-white rounded-md px-3 py-2 mb-4">
+            <Image src="/logocertacr.png" alt={COMPANY.name} width={280} height={140} className="h-11 w-auto object-contain" />
+          </span>
+          <div>
+            <div className="text-base font-semibold" style={DISPLAY}>{COMPANY.short}</div>
+            <div className="text-[10px] uppercase tracking-widest text-[#4FB8C9]/80">desde {COMPANY.founded}</div>
           </div>
           <p className="text-sm text-[#F4F1EB]/60 max-w-xs">
             Pintura interior e exterior em Alcochete, Margem Sul e Lisboa. Garantia escrita em todas as obras.
