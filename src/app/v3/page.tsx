@@ -6,6 +6,7 @@ import {
 } from "@/lib/constants";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import BrandStrip from "@/components/BrandStrip";
+import LoadingScreen from "@/components/LoadingScreen";
 
 // V3 palette — navy/azul corporate
 // Primary: #0F2433 (deep navy, do logo slate)
@@ -19,6 +20,7 @@ const DISPLAY = { fontFamily: "var(--font-inter-tight-v3)", letterSpacing: "-0.0
 export default function V3Page() {
   return (
     <main>
+      <LoadingScreen variant="fill" themeKey="v3" sessionKey="cr-v3-loaded" tagline="A pintura que a sua casa merece." />
       <Header />
       <Hero />
       <KPIBand />

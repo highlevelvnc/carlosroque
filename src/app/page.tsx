@@ -13,10 +13,12 @@ import Footer from "@/components/Footer";
 import WhatsappFAB from "@/components/WhatsappFAB";
 import RevealProvider from "@/components/RevealProvider";
 import BrandStrip from "@/components/BrandStrip";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
   return (
     <>
+      <LoadingScreen variant="brush" themeKey="v1" sessionKey="cr-v1-loaded" tagline="Acabamentos que duram. Pintores que ouvem." />
       <RevealProvider />
       <Header />
       <main>
