@@ -4,6 +4,8 @@ import { COMPANY, NAV_LINKS, PROJECTS, SERVICES, TESTIMONIALS, ZONES, WHATSAPP_U
 import BrandStrip from "@/components/BrandStrip";
 import CountUp from "@/components/CountUp";
 import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
+import ActivityTicker from "@/components/ActivityTicker";
+import V2PortfolioGrid from "@/components/V2PortfolioGrid";
 
 const HERO_IMG = "/portfolio/hero-cozinha.jpeg";
 const SECTION_IMG = "/portfolio/05-moradia-amarela.jpg";
@@ -23,12 +25,13 @@ export default function V2Page() {
         border="#0E0E10"
         display={{ fontFamily: "var(--font-fraunces)" }}
       />
-      <PortfolioGrid />
+      <V2PortfolioGrid />
       <ServicesV2 />
       <TestimonialsV2 />
       <CTAV2 />
       <FooterV2 />
       <BackToTop bg="#156B6B" ink="#F5F2EC" />
+      <ActivityTicker bg="#0E0E10" text="#F5F2EC" accent="#1F9A9A" border="rgba(255,255,255,0.15)" />
     </main>
   );
 }
@@ -145,60 +148,6 @@ function About() {
             ))}
           </ul>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function PortfolioGrid() {
-  return (
-    <section id="obras" className="bg-[#F5F2EC]">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pb-12 lg:pb-20">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-          <div>
-            <span className="text-[11px] uppercase tracking-[0.3em] text-[#0E0E10]/60 font-mono">obras recentes</span>
-            <h2 className="font-display text-5xl lg:text-7xl mt-4 max-w-[14ch] leading-[0.95]">
-              Trabalho que <span className="italic text-[#156B6B]">fala</span> por nós.
-            </h2>
-          </div>
-          <p className="text-[#0E0E10]/70 max-w-md">
-            Cada foto, uma obra real. Sem renders, sem stock. Carregue para ver em grande.
-          </p>
-        </div>
-      </div>
-
-      {/* Asymmetric editorial grid */}
-      <div className="grid grid-cols-12 gap-2 lg:gap-3 px-2 lg:px-3 pb-3">
-        {PROJECTS.slice(0, 8).map((p, i) => {
-          // Custom layout pattern: tall, wide, square, etc.
-          const layouts = [
-            "col-span-12 lg:col-span-8 aspect-[16/9]",
-            "col-span-12 lg:col-span-4 aspect-[4/5]",
-            "col-span-6 lg:col-span-4 aspect-square",
-            "col-span-6 lg:col-span-4 aspect-square",
-            "col-span-12 lg:col-span-4 aspect-square",
-            "col-span-12 lg:col-span-8 aspect-[16/9]",
-            "col-span-12 lg:col-span-5 aspect-[4/5]",
-            "col-span-12 lg:col-span-7 aspect-[16/9]",
-          ];
-          return (
-            <figure key={p.n} className={`relative overflow-hidden group ${layouts[i] || "col-span-6 aspect-square"}`}>
-              <Image
-                src={p.img}
-                alt={`${p.title} — ${p.place}`}
-                fill
-                className="object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <figcaption className="absolute bottom-0 left-0 p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <div className="text-[10px] uppercase tracking-[0.25em] font-mono opacity-80 mb-1">{p.scope}</div>
-                <div className="font-display text-2xl lg:text-3xl">{p.title}</div>
-                <div className="text-xs opacity-80 mt-1">{p.place} · {p.year}</div>
-              </figcaption>
-            </figure>
-          );
-        })}
       </div>
     </section>
   );

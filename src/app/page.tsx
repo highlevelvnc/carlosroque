@@ -15,11 +15,14 @@ import RevealProvider from "@/components/RevealProvider";
 import BrandStrip from "@/components/BrandStrip";
 import LoadingScreen from "@/components/LoadingScreen";
 import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
+import ActivityTicker from "@/components/ActivityTicker";
+import CursorTrail from "@/components/CursorTrail";
 
 export default function Home() {
   return (
     <>
       <LoadingScreen variant="brush" themeKey="v1" sessionKey="cr-v1-loaded" tagline="Acabamentos que duram. Pintores que ouvem." />
+      <CursorTrail color="#1F9A9A" />
       <ScrollProgress color="#1F9A9A" />
       <RevealProvider />
       <Header />
@@ -39,6 +42,7 @@ export default function Home() {
       <Footer />
       <WhatsappFAB />
       <BackToTop bg="#1F9A9A" ink="#0E0E10" />
+      <ActivityTicker bg="#0E0E10" text="#F2F0EC" accent="#1F9A9A" border="#2A2A2F" />
     </>
   );
 }

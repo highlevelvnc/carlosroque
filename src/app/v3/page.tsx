@@ -10,6 +10,9 @@ import LoadingScreen from "@/components/LoadingScreen";
 import CountUp from "@/components/CountUp";
 import FAQ from "@/components/FAQ";
 import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
+import QuoteCalculator from "@/components/QuoteCalculator";
+import ZonesMap from "@/components/ZonesMap";
+import ActivityTicker from "@/components/ActivityTicker";
 
 // V3 palette — navy/azul corporate
 // Primary: #0F2433 (deep navy, do logo slate)
@@ -39,7 +42,23 @@ export default function V3Page() {
       <Services />
       <Showcase />
       <Process />
-      <ZonesSection />
+      <QuoteCalculator
+        accent="#4FB8C9"
+        highlight="#E8B86A"
+        text="#F4F1EB"
+        textDim="#A6B0BA"
+        surface="#16314A"
+        bg="#0F2433"
+        display={DISPLAY}
+      />
+      <ZonesMap
+        accent="#4FB8C9"
+        text="#F4F1EB"
+        textDim="#A6B0BA"
+        surface="#16314A"
+        bg="#0F2433"
+        display={DISPLAY}
+      />
       <Testimonials />
       <FAQ
         accent="#4FB8C9"
@@ -52,6 +71,7 @@ export default function V3Page() {
       <CTA />
       <Footer />
       <BackToTop bg="#4FB8C9" ink="#0F2433" />
+      <ActivityTicker bg="#0F2433" text="#F4F1EB" accent="#4FB8C9" border="rgba(255,255,255,0.15)" />
     </main>
   );
 }
