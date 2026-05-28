@@ -5,6 +5,7 @@ import { COMPANY, buildWhatsappUrl } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Escolha a sua versão · Carlos Roque Pinturas",
   description: "Três propostas de site. Escolha a que mais lhe fala.",
+  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 };
 
 export const viewport = {

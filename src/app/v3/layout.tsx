@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: `${COMPANY.name} — Pintura profissional em Alcochete`,
   description:
     "Especialistas em pintura interior e exterior. Mais de 15 anos a entregar acabamentos com garantia. Alcochete, Montijo, Setúbal e Lisboa.",
+  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
 };
 
 export default function V3Layout({ children }: { children: React.ReactNode }) {
