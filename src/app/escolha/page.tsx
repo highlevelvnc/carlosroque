@@ -7,47 +7,51 @@ export const metadata: Metadata = {
   description: "Duas propostas de site, dois universos visuais. Escolha aquele com que mais se identifica e pintamos a sua casa.",
 };
 
-const OLD_URL = "https://carlos-roque-pinturas-convers-o-pro.vercel.app";
-const NEW_URL = "/";
+const V1_URL = "/";
+const V2_URL = "/v2";
 
 const VERSIONS = [
   {
     tag: "Versão 01",
-    name: "Conversão Pro",
-    subtitle: "Clássico · directo · provado",
+    name: "Atelier Showroom",
+    subtitle: "Dark · editorial · interactivo",
     description:
-      "Layout limpo, fotos das obras em destaque, secções claras. Foco máximo em converter quem chega ao site num pedido de orçamento. Tom corporativo, fácil de ler em qualquer ecrã.",
+      "Site premium em dark mode com tipografia serif gigante e um simulador onde o visitante escolhe a cor da parede e vê o resultado em tempo real. O botão de WhatsApp envia a cor escolhida já formatada. Único no nicho de pintura em Portugal — posiciona o Carlos no segmento alto.",
     bullets: [
-      "Hero directo com botão WhatsApp",
-      "Portfolio em grid com fotos reais",
-      "Testemunhos Google verificados",
-      "Pronto a indexar no Google",
+      "Simulador de cor interactivo (paredes mudam ao vivo)",
+      "WhatsApp pré-formatado com a cor escolhida",
+      "Tipografia editorial Fraunces, scroll horizontal nas obras",
+      "Antes/depois com slider arrastável",
+      "Dark mode com glow laranja/teal",
     ],
-    palette: ["#FFFFFF", "#1F4E79", "#E5E7EB"],
-    paletteNames: ["Branco", "Azul corporate", "Cinza"],
-    iframeUrl: OLD_URL,
-    liveUrl: OLD_URL,
-    waMessage: `Olá Carlos, gostei da versão 01 (Conversão Pro) do site. Queria avançar com esta. Quando podemos falar?`,
-    accent: "#1F4E79",
+    palette: ["#0E0E10", "#FF5B2E", "#1F9A9A", "#F2F0EC"],
+    paletteNames: ["Off-black", "Laranja", "Teal", "Marfim"],
+    iframeUrl: V1_URL,
+    liveUrl: V1_URL,
+    waMessage: `Olá Carlos, gostei da versão 01 (Atelier Showroom) — a do simulador de cor em dark mode. Queria avançar com esta. Quando podemos falar?`,
+    accent: "#FF5B2E",
+    badge: "interactivo",
   },
   {
     tag: "Versão 02",
-    name: "Atelier Showroom",
-    subtitle: "Editorial · dark · interactivo",
+    name: "Galeria Light",
+    subtitle: "Light · photo-heavy · clean",
     description:
-      "Tipografia serif gigante, dark mode premium, e um simulador onde o cliente escolhe a cor e a parede muda em tempo real. Posiciona-o no segmento alto. Único no nicho de pintura em Portugal.",
+      "Site arejado, fundo marfim quente, fotos das obras gigantes em grid editorial assimétrico. Tom calmo e profissional, perfeito para quem confia mais no trabalho do que em truques visuais. Header transparente sobre foto full-screen, secções com muito espaço em branco.",
     bullets: [
-      "Simulador de cor interactivo no hero",
-      "Antes/depois com slider arrastável",
-      "Scroll horizontal nas obras",
-      "WhatsApp pré-formatado com a cor escolhida",
+      "Hero full-screen com foto da cozinha LED",
+      "Grid editorial de obras (estilo revista de arquitectura)",
+      "Secção 'sobre nós' com foto vertical full-bleed",
+      "Stripe escura com números chave (15+ anos, 312 obras)",
+      "Acessível, conservador, máximo apelo a clientes 35-60",
     ],
-    palette: ["#0E0E10", "#FF5B2E", "#1F9A9A"],
-    paletteNames: ["Off-black", "Laranja eléctrico", "Teal da marca"],
-    iframeUrl: NEW_URL,
-    liveUrl: NEW_URL,
-    waMessage: `Olá Carlos, gostei da versão 02 (Atelier Showroom) do site — a do simulador de cor. Queria avançar com esta. Quando podemos falar?`,
-    accent: "#FF5B2E",
+    palette: ["#F5F2EC", "#0E0E10", "#156B6B", "#1F9A9A"],
+    paletteNames: ["Marfim", "Off-black", "Teal profundo", "Teal claro"],
+    iframeUrl: V2_URL,
+    liveUrl: V2_URL,
+    waMessage: `Olá Carlos, gostei da versão 02 (Galeria Light) — a clara com fotos em destaque. Queria avançar com esta. Quando podemos falar?`,
+    accent: "#156B6B",
+    badge: "fotográfico",
   },
 ];
 
@@ -72,14 +76,14 @@ export default function EscolhaPage() {
           <div className="grid lg:grid-cols-12 gap-8 items-end">
             <div className="lg:col-span-8">
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#FF5B2E] font-mono">
-                {"// "}duas propostas, uma decisão
+                {"// "}duas propostas exclusivas, uma decisão
               </span>
               <h1 className="font-display text-[clamp(3rem,9vw,8rem)] mt-4 leading-[0.9]">
                 Carlos, <span className="italic text-[#A6A29A]">qual</span> levas?
               </h1>
             </div>
             <p className="lg:col-span-4 text-[#A6A29A] text-lg leading-relaxed">
-              Construímos duas direcções para o seu site. Veja ambas em baixo, lado a lado, e escolha aquela com que mais se identifica. A decisão é sua — nós executamos.
+              Construímos duas direcções <span className="text-[#1F9A9A]">novas</span> para o seu site — ambas com as suas fotos reais. Veja-as em baixo lado a lado e escolha aquela com que mais se identifica.
             </p>
           </div>
 
@@ -113,7 +117,7 @@ export default function EscolhaPage() {
                     className="text-[10px] uppercase tracking-[0.2em] font-mono px-3 py-1.5 rounded-full border"
                     style={{ borderColor: v.accent, color: v.accent }}
                   >
-                    {i === 0 ? "actual" : "proposta nova"}
+                    {v.badge}
                   </span>
                 </div>
                 <p className="text-[#A6A29A] leading-relaxed">{v.description}</p>

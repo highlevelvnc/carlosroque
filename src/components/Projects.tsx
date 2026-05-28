@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { PROJECTS } from "@/lib/constants";
 
 export default function Projects() {
@@ -56,16 +57,26 @@ export default function Projects() {
                 key={p.n}
                 onMouseEnter={() => setHover(i)}
                 onMouseLeave={() => setHover(null)}
-                className={`relative bg-[#0E0E10] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between cursor-pointer ${
+                className={`relative bg-[#0E0E10] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between cursor-pointer ${
                   isHover ? "w-[640px]" : "w-[320px]"
                 }`}
                 style={{ height: "560px" }}
               >
+                <Image
+                  src={p.img}
+                  alt={`${p.title} — ${p.place}`}
+                  fill
+                  sizes="640px"
+                  className={`object-cover transition-all duration-1000 ${
+                    isHover ? "scale-105 opacity-80" : "scale-100 opacity-40"
+                  }`}
+                />
                 <div
                   className="absolute inset-0 transition-opacity duration-700"
                   style={{
-                    opacity: isHover ? 1 : 0,
-                    background: `linear-gradient(180deg, rgba(14,14,16,0.1) 0%, rgba(14,14,16,0.85) 100%), ${projectGradient(i)}`,
+                    background: isHover
+                      ? "linear-gradient(180deg, rgba(14,14,16,0.2) 0%, rgba(14,14,16,0.85) 100%)"
+                      : "linear-gradient(180deg, rgba(14,14,16,0.6) 0%, rgba(14,14,16,0.95) 100%)",
                   }}
                 />
                 <div className="relative p-8 flex justify-between items-start">
@@ -73,7 +84,7 @@ export default function Projects() {
                   <span className="font-mono text-xs text-[#A6A29A]">{p.year}</span>
                 </div>
                 <div className="relative p-8">
-                  <div className="text-[10px] uppercase tracking-[0.25em] text-[#A6A29A] font-mono mb-3">
+                  <div className="text-[10px] uppercase tracking-[0.25em] text-[#FF5B2E] font-mono mb-3">
                     {p.scope}
                   </div>
                   <h3 className={`font-display transition-all duration-500 ${isHover ? "text-5xl" : "text-3xl"}`}>
@@ -95,19 +106,15 @@ export default function Projects() {
 
       {/* Mobile: stacked grid */}
       <div className="lg:hidden grid grid-cols-1 gap-px bg-[#2A2A2F] mx-0">
-        {PROJECTS.map((p, i) => (
-          <div
-            key={p.n}
-            className="relative bg-[#0E0E10] p-8 h-[280px] flex flex-col justify-between"
-            style={{
-              backgroundImage: `linear-gradient(180deg, rgba(14,14,16,0.6), rgba(14,14,16,0.9)), ${projectGradient(i)}`,
-            }}
-          >
-            <div className="flex justify-between font-mono text-xs text-[#A6A29A]">
+        {PROJECTS.map((p) => (
+          <div key={p.n} className="relative bg-[#0E0E10] overflow-hidden h-[280px] flex flex-col justify-between">
+            <Image src={p.img} alt={p.title} fill sizes="100vw" className="object-cover opacity-60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0E0E10]/60 to-[#0E0E10]/95" />
+            <div className="relative p-8 flex justify-between font-mono text-xs text-[#A6A29A]">
               <span>{p.n}</span><span>{p.year}</span>
             </div>
-            <div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-[#A6A29A] font-mono mb-2">{p.scope}</div>
+            <div className="relative p-8">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-[#FF5B2E] font-mono mb-2">{p.scope}</div>
               <h3 className="font-display text-3xl">{p.title}</h3>
               <div className="text-sm text-[#A6A29A] mt-1">{p.place}</div>
             </div>
@@ -116,16 +123,4 @@ export default function Projects() {
       </div>
     </section>
   );
-}
-
-function projectGradient(i: number) {
-  const palettes = [
-    "linear-gradient(135deg, #E8E1D3 0%, #C8A589 100%)",
-    "linear-gradient(135deg, #2F4A6B 0%, #1a2a3d 100%)",
-    "linear-gradient(135deg, #7A8A6E 0%, #4a5743 100%)",
-    "linear-gradient(135deg, #C8623E 0%, #7a3922 100%)",
-    "linear-gradient(135deg, #F2D9A0 0%, #c7a865 100%)",
-    "linear-gradient(135deg, #2A2A2C 0%, #1a1a1c 100%)",
-  ];
-  return palettes[i % palettes.length];
 }

@@ -73,12 +73,14 @@ export const SERVICES = [
 ] as const;
 
 export const PROJECTS = [
-  { n: "001", title: "Moradia T4", place: "Alcochete", year: 2024, scope: "Interior + Exterior", img: "/portfolio/01.jpg" },
-  { n: "002", title: "Apartamento T2", place: "Montijo", year: 2024, scope: "Interior", img: "/portfolio/02.jpg" },
-  { n: "003", title: "Escritório", place: "Lisboa", year: 2024, scope: "Interior + Lacagem", img: "/portfolio/03.jpg" },
-  { n: "004", title: "Vivenda", place: "Setúbal", year: 2023, scope: "Fachada", img: "/portfolio/04.jpg" },
-  { n: "005", title: "Loja", place: "Pinhal Novo", year: 2023, scope: "Interior", img: "/portfolio/05.jpg" },
-  { n: "006", title: "Moradia geminada", place: "Palmela", year: 2023, scope: "Interior + Exterior", img: "/portfolio/06.jpg" },
+  { n: "001", title: "Cozinha moderna", place: "Alcochete", year: 2024, scope: "Interior + LED", img: "/portfolio/hero-cozinha.jpeg" },
+  { n: "002", title: "Moradia tradicional", place: "Setúbal", year: 2024, scope: "Exterior", img: "/portfolio/01-moradia-tradicional.jpg" },
+  { n: "003", title: "Edifício moderno", place: "Lisboa", year: 2025, scope: "Fachada", img: "/portfolio/02-edificio-moderno.jpg" },
+  { n: "004", title: "Apartamento T3", place: "Montijo", year: 2024, scope: "Interior completo", img: "/portfolio/03-apartamento-interior.jpg" },
+  { n: "005", title: "Moradia moderna", place: "Palmela", year: 2023, scope: "Interior + Exterior", img: "/portfolio/04-moradia-moderna.jpg" },
+  { n: "006", title: "Vivenda clássica", place: "Pinhal Novo", year: 2023, scope: "Fachada + Telhado", img: "/portfolio/05-moradia-amarela.jpg" },
+  { n: "007", title: "Hall de entrada", place: "Alcochete", year: 2023, scope: "Interior", img: "/portfolio/06-hall-moderno.jpg" },
+  { n: "008", title: "Renovação cozinha", place: "Montijo", year: 2024, scope: "Interior + Lacagem", img: "/portfolio/09-renovacao.jpg" },
 ] as const;
 
 export const PROCESS_STEPS = [
@@ -93,7 +95,7 @@ export const ZONES = [
 ] as const;
 
 export const TESTIMONIALS = [
-  { name: "Fátima G.", place: "Alcochete", body: "Pintaram a casa toda em 5 dias, sem sujar nada e o resultado é impecável. Recomendo sem hesitar." },
-  { name: "Alex M.", place: "Montijo", body: "Profissionais a sério. Vieram à hora marcada, deram orçamento honesto e cumpriram tudo." },
-  { name: "João P.", place: "Lisboa", body: "Pintaram o escritório num fim-de-semana para não parar o trabalho. Acabamento perfeito." },
+  { name: "Fátima", place: "Alcochete", body: "Pintura exterior, portões e corrimões realizada com profissionalismo, pontualidade e dentro do prazo acordado. Excelente equipa. Recomendo." },
+  { name: "Alex", place: "Montijo", body: "O melhor da zona! Pintámos um T3 e não podíamos ter ficado mais contentes." },
+  { name: "João", place: "Setúbal", body: "Serviço de pintura exterior 5★ de uma moradia e isolamento do telhado, deixaram tudo impecável. Equipa atenciosa e muito rápidos a terminar o trabalho. Recomendo." },
 ] as const;

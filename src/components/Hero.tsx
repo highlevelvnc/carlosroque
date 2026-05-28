@@ -1,19 +1,31 @@
 "use client";
+import Image from "next/image";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function Hero() {
   return (
     <section id="top" className="relative min-h-screen flex flex-col justify-end pb-12 lg:pb-20 overflow-hidden">
-      {/* Background gradient — simulates room lighting */}
+      {/* Background: real photo + heavy dark overlay */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1E1E22] via-[#0E0E10] to-[#0E0E10]" />
+        <Image
+          src="/portfolio/hero-cozinha.jpeg"
+          alt="Cozinha pintada pela Carlos Roque Pinturas"
+          fill
+          priority
+          className="object-cover object-center scale-110"
+          sizes="100vw"
+        />
+        {/* Dark gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0E0E10] via-[#0E0E10]/85 to-[#0E0E10]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-[#0E0E10]/60 to-transparent" />
+        {/* Accent glows */}
         <div
-          className="absolute -top-32 -right-32 w-[700px] h-[700px] rounded-full opacity-30 blur-3xl"
+          className="absolute -top-32 -right-32 w-[700px] h-[700px] rounded-full opacity-25 blur-3xl"
           style={{ background: "radial-gradient(circle, #FF5B2E 0%, transparent 60%)" }}
         />
         <div
-          className="absolute -bottom-40 -left-20 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
-          style={{ background: "radial-gradient(circle, #C9A961 0%, transparent 70%)" }}
+          className="absolute -bottom-40 -left-20 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl"
+          style={{ background: "radial-gradient(circle, #1F9A9A 0%, transparent 70%)" }}
         />
       </div>
 
