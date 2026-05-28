@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     locale: "pt_PT",
     url: SITE_URL,
     siteName: COMPANY.name,
-    title: `${COMPANY.name} — Paredes que duram`,
+    title: `${COMPANY.name} — Pinturas que duram`,
     description:
       "Pintura interior e exterior em Alcochete, Margem Sul e Lisboa. 15+ anos, 312 obras, garantia escrita até 5 anos. Orçamento grátis em 48h.",
     images: [
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${COMPANY.name} — Paredes que duram`,
+    title: `${COMPANY.name} — Pinturas que duram`,
     description: "Pintura interior e exterior em Alcochete, Margem Sul e Lisboa.",
     images: ["/portfolio/hero-cozinha.jpeg"],
   },

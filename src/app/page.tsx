@@ -23,7 +23,7 @@ import AirlessShowcase from "@/components/AirlessShowcase";
 export default function Home() {
   return (
     <>
-      <LoadingScreen variant="brush" themeKey="v1" sessionKey="cr-v1-loaded" tagline="Paredes que duram." />
+      <LoadingScreen variant="brush" themeKey="v1" sessionKey="cr-v1-loaded" tagline="Pinturas que duram." />
       <CursorTrail color="#1F9A9A" />
       <ScrollProgress color="#1F9A9A" />
       <RevealProvider />

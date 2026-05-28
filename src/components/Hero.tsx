@@ -47,7 +47,7 @@ export default function Hero() {
         {/* The headline */}
         <h1 className="font-display text-[clamp(3.5rem,12vw,12rem)] leading-[0.9] tracking-tight max-w-[14ch]">
           <span data-reveal data-reveal-delay="200" className="block">
-            Paredes
+            Pinturas
           </span>
           <span data-reveal data-reveal-delay="350" className="block italic text-[#C9A961]">
             que duram.
@@ -61,8 +61,8 @@ export default function Hero() {
             className="lg:col-span-5 text-lg lg:text-xl text-[#A6A29A] leading-relaxed max-w-prose"
           >
             Acabamentos profissionais para a sua casa, escritório ou loja. Orçamento honesto em 48h,
-            garantia escrita até <span className="text-[#F2F0EC]">5 anos</span>. Tratamos da pintura para
-            tu tratares do resto.
+            garantia escrita até <span className="text-[#F2F0EC]">5 anos</span>. Tratamos da pintura.
+            O resto fica consigo.
           </p>
 
           <div data-reveal data-reveal-delay="850" className="lg:col-span-4 flex flex-wrap items-center gap-4">
