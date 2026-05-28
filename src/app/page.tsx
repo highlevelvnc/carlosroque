@@ -18,6 +18,7 @@ import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
 import ActivityTicker from "@/components/ActivityTicker";
 import CursorTrail from "@/components/CursorTrail";
 import PaintDivider from "@/components/PaintDivider";
+import AirlessShowcase from "@/components/AirlessShowcase";
 
 export default function Home() {
   return (
@@ -33,6 +34,15 @@ export default function Home() {
         <ColorSimulator />
         <PaintDivider color="#1F9A9A" />
         <Projects />
+        <AirlessShowcase
+          src="/portfolio/airless.mp4"
+          accent="#1F9A9A"
+          bg="#16161A"
+          text="#F2F0EC"
+          textDim="#A6A29A"
+          border="#2A2A2F"
+          display={{ fontFamily: "var(--font-fraunces)" }}
+        />
         <BrandStrip bg="#0E0E10" text="#A6A29A" accent="#1F9A9A" border="#2A2A2F" display={{ fontFamily: "var(--font-fraunces)" }} />
         <Services />
         <PaintDivider color="#C9A961" flip />

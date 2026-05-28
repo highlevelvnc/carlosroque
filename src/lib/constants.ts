@@ -43,17 +43,17 @@ export const SERVICES = [
   {
     n: "01",
     title: "Pintura interior",
-    body: "Apartamentos, moradias, escritórios. Preparação completa de paredes, massas, lixagens, primário e duas demãos de tinta lavável.",
+    body: "Apartamentos, moradias, escritórios. Preparação completa de paredes, massas, lixagens, primário e duas demãos de tinta lavável. Aplicação a rolo ou com sistema airless quando há grandes áreas.",
   },
   {
     n: "02",
     title: "Pintura exterior",
-    body: "Fachadas, varandas e muros. Tintas com proteção UV e anti-fungo, garantia de aderência mesmo em zona ribeirinha.",
+    body: "Fachadas, varandas e muros. Tintas com proteção UV e anti-fungo, garantia de aderência mesmo em zona ribeirinha. Pintura a pistola airless para acabamento uniforme em obras de grande porte.",
   },
   {
     n: "03",
     title: "Reparações para pintar",
-    body: "Tapamento de fissuras e pequenas reparações nas paredes e tectos para deixar tudo pronto para a pintura.",
+    body: "Reparação de fissuras e pequenas reparações nas paredes e tectos para deixar tudo pronto para a pintura.",
   },
   {
     n: "04",
@@ -75,7 +75,7 @@ export const SERVICES = [
 export const PROJECTS = [
   { n: "001", title: "Loja Sandro", place: "Av. da Liberdade, Lisboa", year: 2024, scope: "Comercial · Interior", img: "/portfolio/sandro-lisboa-1.jpg" },
   { n: "002", title: "Loja Maje Paris", place: "Lisboa", year: 2024, scope: "Comercial · Interior", img: "/portfolio/maje-lisboa-1.jpg" },
-  { n: "003", title: "Prédio novo", place: "Margem Sul", year: 2025, scope: "Interior + Exterior", img: "/portfolio/predio-novo-1.jpg" },
+  { n: "003", title: "Prédios novos", place: "Margem Sul", year: 2025, scope: "Pintura com airless · 3 fases", img: "/portfolio/predios-completo.jpg" },
   { n: "004", title: "Cozinha moderna", place: "Alcochete", year: 2024, scope: "Interior + LED", img: "/portfolio/hero-cozinha.jpeg" },
   { n: "005", title: "Moradia tradicional", place: "Setúbal", year: 2024, scope: "Exterior", img: "/portfolio/01-moradia-tradicional.jpg" },
   { n: "006", title: "Edifício moderno", place: "Lisboa", year: 2025, scope: "Fachada", img: "/portfolio/02-edificio-moderno.jpg" },

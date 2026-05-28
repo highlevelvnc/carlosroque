@@ -17,6 +17,7 @@ import Magnetic from "@/components/Magnetic";
 import Tilt from "@/components/Tilt";
 import Reveal from "@/components/Reveal";
 import BeforeAfterPhoto from "@/components/BeforeAfterPhoto";
+import AirlessShowcase from "@/components/AirlessShowcase";
 
 // V3 palette — navy/azul corporate
 // Primary: #0F2433 (deep navy, do logo slate)
@@ -45,6 +46,15 @@ export default function V3Page() {
       <SignaturePiece />
       <Services />
       <Showcase />
+      <AirlessShowcase
+        src="/portfolio/airless.mp4"
+        accent="#4FB8C9"
+        bg="#16314A"
+        text="#F4F1EB"
+        textDim="#A6B0BA"
+        border="rgba(255,255,255,0.08)"
+        display={DISPLAY}
+      />
       <BeforeAfterPhoto
         before="/portfolio/05-moradia-amarela.jpg"
         after="/portfolio/hero-cozinha.jpeg"
