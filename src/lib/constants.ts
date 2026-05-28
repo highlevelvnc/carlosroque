@@ -52,8 +52,8 @@ export const SERVICES = [
   },
   {
     n: "03",
-    title: "Estuque e reparações",
-    body: "Tapamento de fissuras, nivelamento de paredes, reparação de tectos com infiltrações antes da pintura.",
+    title: "Reparações para pintar",
+    body: "Tapamento de fissuras e pequenas reparações nas paredes e tectos para deixar tudo pronto para a pintura.",
   },
   {
     n: "04",
@@ -68,7 +68,7 @@ export const SERVICES = [
   {
     n: "06",
     title: "Acompanhamento de obra",
-    body: "Coordenação com pedreiro, electricista e canalizador. Tu falas connosco, nós tratamos do resto.",
+    body: "Acompanhamos a obra na nossa área — pintura, do início ao fim. Para outras especialidades, encaminhamos para profissionais de confiança.",
   },
 ] as const;
 
@@ -86,7 +86,7 @@ export const PROJECTS = [
 export const PROCESS_STEPS = [
   { n: "01", title: "Visita", body: "Vamos a tua casa, medimos paredes, ouvimos o que queres. Sem custo, sem compromisso." },
   { n: "02", title: "Orçamento", body: "Em 48h recebes proposta detalhada: m², tintas escolhidas, prazo e preço fechado." },
-  { n: "03", title: "Execução", body: "Protegemos móveis e pavimentos. Pintamos. Limpamos. Entregas a casa como a recebemos." },
+  { n: "03", title: "Execução", body: "Protegemos móveis e pavimentos. Pintamos. Limpamos. Entregamos a sua casa como a recebemos." },
   { n: "04", title: "Garantia", body: "2 anos de garantia escrita em qualquer acabamento interior. 5 anos em fachadas." },
 ] as const;
 

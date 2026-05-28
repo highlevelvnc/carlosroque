@@ -49,11 +49,8 @@ export default function Hero() {
           <span data-reveal data-reveal-delay="200" className="block">
             Paredes
           </span>
-          <span data-reveal data-reveal-delay="350" className="block italic text-[#A6A29A]">
+          <span data-reveal data-reveal-delay="350" className="block italic text-[#C9A961]">
             que duram.
-          </span>
-          <span data-reveal data-reveal-delay="500" className="block">
-            Pintores que <span className="text-[#C9A961] italic">ouvem.</span>
           </span>
         </h1>
 

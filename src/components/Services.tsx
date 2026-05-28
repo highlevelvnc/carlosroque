@@ -6,13 +6,10 @@ export default function Services() {
     <section id="servicos" className="py-24 lg:py-40">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-8 mb-16">
-          <div data-reveal className="lg:col-span-5">
+          <div data-reveal className="lg:col-span-7">
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#1F9A9A] font-mono">
               {"// "}o que fazemos
             </span>
-            <h2 className="font-display text-5xl lg:text-7xl mt-4">
-              Tudo o que tem <span className="italic text-[#A6A29A]">tinta</span>.
-            </h2>
           </div>
           <p data-reveal data-reveal-delay="200" className="lg:col-span-5 lg:col-start-8 text-[#A6A29A] text-lg leading-relaxed self-end">
             Trabalhamos em casas particulares, escritórios e espaços comerciais. Sempre com tinta de marca (CIN, Robbialac, Dyrup) e garantia escrita no orçamento.

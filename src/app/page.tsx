@@ -22,7 +22,7 @@ import PaintDivider from "@/components/PaintDivider";
 export default function Home() {
   return (
     <>
-      <LoadingScreen variant="brush" themeKey="v1" sessionKey="cr-v1-loaded" tagline="Acabamentos que duram. Pintores que ouvem." />
+      <LoadingScreen variant="brush" themeKey="v1" sessionKey="cr-v1-loaded" tagline="Paredes que duram." />
       <CursorTrail color="#1F9A9A" />
       <ScrollProgress color="#1F9A9A" />
       <RevealProvider />
