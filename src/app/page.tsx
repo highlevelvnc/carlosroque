@@ -17,6 +17,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
 import ActivityTicker from "@/components/ActivityTicker";
 import CursorTrail from "@/components/CursorTrail";
+import PaintDivider from "@/components/PaintDivider";
 
 export default function Home() {
   return (
@@ -30,9 +31,11 @@ export default function Home() {
         <Hero />
         <Marquee />
         <ColorSimulator />
+        <PaintDivider color="#1F9A9A" />
         <Projects />
         <BrandStrip bg="#0E0E10" text="#A6A29A" accent="#1F9A9A" border="#2A2A2F" display={{ fontFamily: "var(--font-fraunces)" }} />
         <Services />
+        <PaintDivider color="#C9A961" flip />
         <BeforeAfter />
         <Process />
         <Zones />

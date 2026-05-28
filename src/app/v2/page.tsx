@@ -6,6 +6,9 @@ import CountUp from "@/components/CountUp";
 import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
 import ActivityTicker from "@/components/ActivityTicker";
 import V2PortfolioGrid from "@/components/V2PortfolioGrid";
+import Magnetic from "@/components/Magnetic";
+import Tilt from "@/components/Tilt";
+import Reveal from "@/components/Reveal";
 
 const HERO_IMG = "/portfolio/hero-cozinha.jpeg";
 const SECTION_IMG = "/portfolio/05-moradia-amarela.jpg";
@@ -82,9 +85,11 @@ function Hero() {
               <p className="text-base lg:text-lg leading-relaxed opacity-90">
                 Mais de 15 anos a pintar interiores e fachadas. Orçamento honesto em 48h, garantia escrita até 5 anos.
               </p>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="inline-flex items-center gap-2 mt-6 text-sm font-medium border-b border-white pb-1 hover:opacity-80 transition">
-                Falar pelo WhatsApp →
-              </a>
+              <Magnetic strength={0.35}>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="inline-flex items-center gap-2 mt-6 text-sm font-medium border-b border-white pb-1 hover:opacity-80 transition">
+                  Falar pelo WhatsApp →
+                </a>
+              </Magnetic>
             </div>
           </div>
         </div>
@@ -204,8 +209,9 @@ function TestimonialsV2() {
         </div>
         <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
           {TESTIMONIALS.map((t, i) => (
+            <Reveal key={t.name} delay={i * 120}>
+            <Tilt max={5} scale={1.015}>
             <article
-              key={t.name}
               className="relative overflow-hidden rounded-lg p-7 lg:p-8 min-h-[340px] flex flex-col group"
             >
               {/* photo backdrop */}
@@ -229,6 +235,8 @@ function TestimonialsV2() {
                 </div>
               </div>
             </article>
+            </Tilt>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -13,6 +13,10 @@ import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
 import QuoteCalculator from "@/components/QuoteCalculator";
 import ZonesMap from "@/components/ZonesMap";
 import ActivityTicker from "@/components/ActivityTicker";
+import Magnetic from "@/components/Magnetic";
+import Tilt from "@/components/Tilt";
+import Reveal from "@/components/Reveal";
+import BeforeAfterPhoto from "@/components/BeforeAfterPhoto";
 
 // V3 palette — navy/azul corporate
 // Primary: #0F2433 (deep navy, do logo slate)
@@ -41,6 +45,19 @@ export default function V3Page() {
       <SignaturePiece />
       <Services />
       <Showcase />
+      <BeforeAfterPhoto
+        before="/portfolio/05-moradia-amarela.jpg"
+        after="/portfolio/hero-cozinha.jpeg"
+        beforeLabel="Antes"
+        afterLabel="Depois"
+        accent="#4FB8C9"
+        surface="#16314A"
+        text="#F4F1EB"
+        textDim="#A6B0BA"
+        bg="#0F2433"
+        display={DISPLAY}
+        caption="Uma intervenção típica: fachada exterior renovada (antes) e cozinha interior moderna com iluminação LED (depois). 7 dias de obra, tinta CIN."
+      />
       <Process />
       <QuoteCalculator
         accent="#4FB8C9"
@@ -125,9 +142,11 @@ function Hero() {
             </p>
 
             <div className="mt-8 lg:mt-10 flex flex-wrap gap-3 items-center">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="inline-flex items-center gap-2 bg-[#E8B86A] text-[#0F2433] px-7 py-4 rounded font-semibold hover:bg-[#f0c47e] hover:-translate-y-0.5 transition">
-                Orçamento grátis →
-              </a>
+              <Magnetic strength={0.3}>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="inline-flex items-center gap-2 bg-[#E8B86A] text-[#0F2433] px-7 py-4 rounded font-semibold hover:bg-[#f0c47e] transition">
+                  Orçamento grátis →
+                </a>
+              </Magnetic>
               <a href="#obras" className="inline-flex items-center gap-2 border border-[#F4F1EB]/30 text-[#F4F1EB] px-7 py-4 rounded hover:border-[#F4F1EB]/70 transition">
                 Ver obras
               </a>
@@ -249,15 +268,19 @@ function Services() {
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {SERVICES.slice(0, 6).map((s) => (
-            <article key={s.n} className="group bg-[#0F2433] p-8 rounded border border-white/5 hover:border-[#4FB8C9]/40 transition">
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-[10px] uppercase tracking-widest text-[#4FB8C9]">{s.n}</span>
-                <span className="w-7 h-7 rounded-full border border-white/20 group-hover:border-[#4FB8C9] group-hover:text-[#4FB8C9] flex items-center justify-center text-xs transition">→</span>
-              </div>
-              <h3 className="text-2xl mb-3" style={DISPLAY}>{s.title}</h3>
-              <p className="text-sm text-[#F4F1EB]/65 leading-relaxed">{s.body}</p>
-            </article>
+          {SERVICES.slice(0, 6).map((s, i) => (
+            <Reveal key={s.n} delay={i * 80} className="">
+              <Tilt max={5} scale={1.02}>
+                <article className="group bg-[#0F2433] p-8 rounded border border-white/5 hover:border-[#4FB8C9]/40 transition h-full">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="text-[10px] uppercase tracking-widest text-[#4FB8C9]">{s.n}</span>
+                    <span className="w-7 h-7 rounded-full border border-white/20 group-hover:border-[#4FB8C9] group-hover:text-[#4FB8C9] flex items-center justify-center text-xs transition">→</span>
+                  </div>
+                  <h3 className="text-2xl mb-3" style={DISPLAY}>{s.title}</h3>
+                  <p className="text-sm text-[#F4F1EB]/65 leading-relaxed">{s.body}</p>
+                </article>
+              </Tilt>
+            </Reveal>
           ))}
         </div>
       </div>

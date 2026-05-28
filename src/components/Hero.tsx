@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { WHATSAPP_URL } from "@/lib/constants";
 import CountUp from "@/components/CountUp";
+import Magnetic from "@/components/Magnetic";
 
 export default function Hero() {
   return (
@@ -68,10 +69,12 @@ export default function Hero() {
           </p>
 
           <div data-reveal data-reveal-delay="850" className="lg:col-span-4 flex flex-wrap items-center gap-4">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn-primary">
-              Pedir orçamento
-              <span aria-hidden>→</span>
-            </a>
+            <Magnetic strength={0.3}>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn-primary">
+                Pedir orçamento
+                <span aria-hidden>→</span>
+              </a>
+            </Magnetic>
             <a href="#cores" className="btn-ghost">
               Simular cor da parede
             </a>
