@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { COMPANY, NAV_LINKS, PROJECTS, SERVICES, TESTIMONIALS, ZONES, WHATSAPP_URL, buildWhatsappUrl } from "@/lib/constants";
+import BrandStrip from "@/components/BrandStrip";
 
 const HERO_IMG = "/portfolio/hero-cozinha.jpeg";
 const SECTION_IMG = "/portfolio/05-moradia-amarela.jpg";
@@ -12,6 +13,13 @@ export default function V2Page() {
       <Hero />
       <Strip />
       <About />
+      <BrandStrip
+        bg="#F5F2EC"
+        text="#0E0E10"
+        accent="#156B6B"
+        border="#0E0E10"
+        display={{ fontFamily: "var(--font-fraunces)" }}
+      />
       <PortfolioGrid />
       <ServicesV2 />
       <TestimonialsV2 />
@@ -229,6 +237,11 @@ function ServicesV2() {
 }
 
 function TestimonialsV2() {
+  const bgs = [
+    "/portfolio/01-moradia-tradicional.jpg",
+    "/portfolio/06-hall-moderno.jpg",
+    "/portfolio/04-moradia-moderna.jpg",
+  ];
   return (
     <section className="py-24 lg:py-40 bg-[#F5F2EC]">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -238,14 +251,31 @@ function TestimonialsV2() {
             <span className="italic text-[#156B6B]">5</span> estrelas. Merecidas.
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {TESTIMONIALS.map((t) => (
-            <article key={t.name} className="border-t-2 border-[#156B6B] pt-6">
-              <div className="text-[#156B6B] text-lg tracking-widest mb-4">★★★★★</div>
-              <p className="font-display text-2xl leading-snug mb-6">&ldquo;{t.body}&rdquo;</p>
-              <div className="text-sm">
-                <span className="font-medium">{t.name}</span>
-                <span className="text-[#0E0E10]/60"> · {t.place}</span>
+        <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
+          {TESTIMONIALS.map((t, i) => (
+            <article
+              key={t.name}
+              className="relative overflow-hidden rounded-lg p-7 lg:p-8 min-h-[340px] flex flex-col group"
+            >
+              {/* photo backdrop */}
+              <Image src={bgs[i]} alt="" fill className="object-cover transition-transform duration-[1200ms] group-hover:scale-105" sizes="(max-width:768px) 100vw, 33vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-[#0E0E10]/85 to-[#0E0E10]/60" />
+
+              <div className="relative flex flex-col h-full text-white">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="text-[#1F9A9A] text-lg tracking-widest">★★★★★</div>
+                  <div className="text-[9px] uppercase tracking-[0.25em] font-mono opacity-60">Google</div>
+                </div>
+                <p className="font-display text-xl lg:text-2xl leading-snug mb-6">&ldquo;{t.body}&rdquo;</p>
+                <div className="mt-auto pt-5 border-t border-white/15 text-sm flex items-center justify-between">
+                  <div>
+                    <div className="font-medium">{t.name}</div>
+                    <div className="text-xs opacity-70 mt-0.5">{t.place}</div>
+                  </div>
+                  <div className="w-8 h-8 rounded-full bg-[#156B6B] flex items-center justify-center text-xs font-bold">
+                    {t.name.charAt(0)}
+                  </div>
+                </div>
               </div>
             </article>
           ))}

@@ -4,6 +4,8 @@ import {
   COMPANY, NAV_LINKS, PROJECTS, SERVICES, TESTIMONIALS, ZONES,
   WHATSAPP_URL, buildWhatsappUrl,
 } from "@/lib/constants";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
+import BrandStrip from "@/components/BrandStrip";
 
 // V3 palette — navy/azul corporate
 // Primary: #0F2433 (deep navy, do logo slate)
@@ -20,6 +22,13 @@ export default function V3Page() {
       <Header />
       <Hero />
       <KPIBand />
+      <BrandStrip
+        bg="#0F2433"
+        text="#F4F1EB"
+        accent="#4FB8C9"
+        border="#16314A"
+        display={{ ...DISPLAY }}
+      />
       <SignaturePiece />
       <Services />
       <Showcase />
@@ -59,34 +68,70 @@ function Header() {
 
 function Hero() {
   return (
-    <section className="relative pt-32 pb-16 lg:pb-24 overflow-hidden">
-      <div className="absolute top-0 inset-x-0 h-[640px] -z-10">
-        <Image src="/portfolio/05-moradia-amarela.jpg" alt="" fill className="object-cover" priority sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0F2433]/70 via-[#0F2433]/85 to-[#0F2433]" />
-      </div>
+    <section className="relative pt-28 lg:pt-32 pb-16 lg:pb-24 overflow-hidden bg-[#0F2433]">
+      {/* Ambient glow */}
+      <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl pointer-events-none" style={{ background: "radial-gradient(circle, #4FB8C9 0%, transparent 70%)" }} />
 
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-24">
-        <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#4FB8C9] mb-8 border border-[#4FB8C9]/30 rounded-full px-4 py-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#4FB8C9] animate-pulse" />
-          Disponível em Alcochete · Montijo · Setúbal · Lisboa
-        </div>
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          {/* LEFT — text */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            <div className="inline-flex self-start items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#4FB8C9] mb-6 border border-[#4FB8C9]/30 rounded-full px-4 py-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#4FB8C9] animate-pulse" />
+              Alcochete · Montijo · Setúbal · Lisboa
+            </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-[8rem] leading-[0.95]" style={DISPLAY}>
-          A pintura que a <br />
-          sua casa <span className="text-[#4FB8C9]">merece</span>.
-        </h1>
+            <h1 className="text-5xl sm:text-6xl lg:text-[7.5rem] leading-[0.95]" style={DISPLAY}>
+              A pintura<br />
+              que a sua casa<br />
+              <span className="text-[#4FB8C9]">merece</span>.
+            </h1>
 
-        <div className="grid lg:grid-cols-12 gap-8 mt-12 lg:mt-16">
-          <p className="lg:col-span-6 text-lg lg:text-xl text-[#F4F1EB]/75 max-w-2xl leading-relaxed">
-            Há mais de 15 anos a transformar casas, apartamentos e fachadas no concelho de Alcochete. Trabalho rigoroso, prazos cumpridos, tinta de marca e garantia escrita até 5 anos.
-          </p>
-          <div className="lg:col-span-6 flex flex-wrap gap-3 items-center lg:justify-end">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="inline-flex items-center gap-2 bg-[#E8B86A] text-[#0F2433] px-7 py-4 rounded font-semibold hover:bg-[#f0c47e] transition">
-              Orçamento grátis →
-            </a>
-            <a href="#obras" className="inline-flex items-center gap-2 border border-[#F4F1EB]/30 text-[#F4F1EB] px-7 py-4 rounded hover:border-[#F4F1EB]/70 transition">
-              Ver obras
-            </a>
+            <p className="mt-8 lg:mt-10 text-base lg:text-lg text-[#F4F1EB]/75 max-w-xl leading-relaxed">
+              Há mais de 15 anos a transformar casas, apartamentos e fachadas no concelho de Alcochete. Trabalho rigoroso, prazos cumpridos, tinta de marca e garantia escrita até 5 anos.
+            </p>
+
+            <div className="mt-8 lg:mt-10 flex flex-wrap gap-3 items-center">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="inline-flex items-center gap-2 bg-[#E8B86A] text-[#0F2433] px-7 py-4 rounded font-semibold hover:bg-[#f0c47e] hover:-translate-y-0.5 transition">
+                Orçamento grátis →
+              </a>
+              <a href="#obras" className="inline-flex items-center gap-2 border border-[#F4F1EB]/30 text-[#F4F1EB] px-7 py-4 rounded hover:border-[#F4F1EB]/70 transition">
+                Ver obras
+              </a>
+            </div>
+          </div>
+
+          {/* RIGHT — photo collage */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative aspect-[3/4] lg:aspect-auto lg:h-full lg:min-h-[640px] rounded-lg overflow-hidden">
+              <Image
+                src="/portfolio/hero-cozinha.jpeg"
+                alt="Cozinha pintada pela Carlos Roque Pinturas"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F2433]/60 via-transparent to-transparent" />
+              {/* Floating spec card */}
+              <div className="absolute bottom-5 left-5 right-5 lg:bottom-6 lg:left-6 lg:right-6 bg-[#0F2433]/85 backdrop-blur border border-white/10 rounded-md p-4 lg:p-5">
+                <div className="text-[10px] uppercase tracking-widest text-[#4FB8C9] mb-1">obra recente</div>
+                <div className="text-lg lg:text-2xl text-[#F4F1EB]" style={DISPLAY}>Cozinha moderna · Alcochete</div>
+                <div className="flex items-center gap-4 mt-3 text-xs text-[#F4F1EB]/70">
+                  <span>2024</span>
+                  <span className="w-px h-3 bg-white/20" />
+                  <span>4 dias de obra</span>
+                  <span className="w-px h-3 bg-white/20" />
+                  <span>CIN Vinylsilk</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Stat sticker */}
+            <div className="hidden lg:flex absolute -left-6 top-8 bg-[#E8B86A] text-[#0F2433] rounded-md px-5 py-4 flex-col rotate-[-3deg] shadow-2xl">
+              <span className="text-3xl" style={DISPLAY}>5★</span>
+              <span className="text-[10px] uppercase tracking-widest">no Google</span>
+            </div>
           </div>
         </div>
       </div>
@@ -203,17 +248,23 @@ function Showcase() {
           </p>
         </div>
       </div>
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+        <PortfolioCarousel
+          slides={PROJECTS.slice(0, 8).map((p) => ({
+            img: p.img, title: p.title, place: p.place, scope: p.scope, year: p.year,
+          }))}
+          theme={{ bg: "#0F2433", surface: "#16314A", ink: "#F4F1EB", inkDim: "#A6A29A", accent: "#4FB8C9" }}
+          display={DISPLAY}
+          interval={5500}
+        />
+      </div>
+
+      {/* Thumbnails strip below carousel */}
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 mt-6 grid grid-cols-4 lg:grid-cols-8 gap-2 lg:gap-3">
         {PROJECTS.slice(0, 8).map((p) => (
-          <figure key={p.n} className="group relative aspect-[3/4] overflow-hidden rounded">
-            <Image src={p.img} alt={p.title} fill sizes="(max-width:1024px) 50vw, 25vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0F2433] via-[#0F2433]/30 to-transparent" />
-            <figcaption className="absolute bottom-0 inset-x-0 p-5">
-              <div className="text-[10px] uppercase tracking-widest text-[#4FB8C9] mb-1">{p.scope}</div>
-              <div className="text-xl leading-tight" style={DISPLAY}>{p.title}</div>
-              <div className="text-xs text-[#F4F1EB]/70 mt-0.5">{p.place} · {p.year}</div>
-            </figcaption>
-          </figure>
+          <div key={p.n + "-thumb"} className="relative aspect-square overflow-hidden rounded opacity-60 hover:opacity-100 transition">
+            <Image src={p.img} alt="" fill sizes="120px" className="object-cover" />
+          </div>
         ))}
       </div>
     </section>

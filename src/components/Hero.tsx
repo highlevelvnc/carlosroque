@@ -15,9 +15,9 @@ export default function Hero() {
           className="object-cover object-center scale-110"
           sizes="100vw"
         />
-        {/* Dark gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0E0E10] via-[#0E0E10]/85 to-[#0E0E10]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-[#0E0E10]/60 to-transparent" />
+        {/* Dark gradient overlay for readability — left strong, right reveals photo */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0E0E10] via-[#0E0E10]/70 to-[#0E0E10]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-[#0E0E10]/40 to-[#0E0E10]/10" />
         {/* Accent glows */}
         <div
           className="absolute -top-32 -right-32 w-[700px] h-[700px] rounded-full opacity-25 blur-3xl"

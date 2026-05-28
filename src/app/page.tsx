@@ -12,6 +12,7 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import WhatsappFAB from "@/components/WhatsappFAB";
 import RevealProvider from "@/components/RevealProvider";
+import BrandStrip from "@/components/BrandStrip";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Marquee />
         <ColorSimulator />
         <Projects />
+        <BrandStrip bg="#0E0E10" text="#A6A29A" accent="#1F9A9A" border="#2A2A2F" display={{ fontFamily: "var(--font-fraunces)" }} />
         <Services />
         <BeforeAfter />
         <Process />
