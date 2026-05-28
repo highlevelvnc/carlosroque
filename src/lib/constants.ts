@@ -80,7 +80,7 @@ export const PROJECTS = [
   { n: "005", title: "Moradia tradicional", place: "Setúbal", year: 2024, scope: "Exterior", img: "/portfolio/01-moradia-tradicional.jpg" },
   { n: "006", title: "Edifício moderno", place: "Lisboa", year: 2025, scope: "Fachada", img: "/portfolio/02-edificio-moderno.jpg" },
   { n: "007", title: "Apartamento T3", place: "Montijo", year: 2024, scope: "Interior completo", img: "/portfolio/03-apartamento-interior.jpg" },
-  { n: "008", title: "Moradia moderna", place: "Palmela", year: 2023, scope: "Interior + Exterior", img: "/portfolio/04-moradia-moderna.jpg" },
+  { n: "008", title: "Moradia moderna com piscina", place: "Palmela", year: 2023, scope: "Exterior · 2 fachadas", img: "/portfolio/moradia-moderna-completa.jpg" },
   { n: "009", title: "Vivenda clássica", place: "Pinhal Novo", year: 2023, scope: "Fachada + Telhado", img: "/portfolio/05-moradia-amarela.jpg" },
   { n: "010", title: "Hall de entrada", place: "Alcochete", year: 2023, scope: "Interior", img: "/portfolio/06-hall-moderno.jpg" },
 ] as const;
