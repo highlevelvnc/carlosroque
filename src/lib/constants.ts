@@ -73,19 +73,21 @@ export const SERVICES = [
 ] as const;
 
 export const PROJECTS = [
-  { n: "001", title: "Cozinha moderna", place: "Alcochete", year: 2024, scope: "Interior + LED", img: "/portfolio/hero-cozinha.jpeg" },
-  { n: "002", title: "Moradia tradicional", place: "Setúbal", year: 2024, scope: "Exterior", img: "/portfolio/01-moradia-tradicional.jpg" },
-  { n: "003", title: "Edifício moderno", place: "Lisboa", year: 2025, scope: "Fachada", img: "/portfolio/02-edificio-moderno.jpg" },
-  { n: "004", title: "Apartamento T3", place: "Montijo", year: 2024, scope: "Interior completo", img: "/portfolio/03-apartamento-interior.jpg" },
-  { n: "005", title: "Moradia moderna", place: "Palmela", year: 2023, scope: "Interior + Exterior", img: "/portfolio/04-moradia-moderna.jpg" },
-  { n: "006", title: "Vivenda clássica", place: "Pinhal Novo", year: 2023, scope: "Fachada + Telhado", img: "/portfolio/05-moradia-amarela.jpg" },
-  { n: "007", title: "Hall de entrada", place: "Alcochete", year: 2023, scope: "Interior", img: "/portfolio/06-hall-moderno.jpg" },
-  { n: "008", title: "Renovação cozinha", place: "Montijo", year: 2024, scope: "Interior + Lacagem", img: "/portfolio/09-renovacao.jpg" },
+  { n: "001", title: "Loja Sandro", place: "Av. da Liberdade, Lisboa", year: 2024, scope: "Comercial · Interior", img: "/portfolio/sandro-lisboa-1.jpg" },
+  { n: "002", title: "Loja Maje Paris", place: "Lisboa", year: 2024, scope: "Comercial · Interior", img: "/portfolio/maje-lisboa-1.jpg" },
+  { n: "003", title: "Prédio novo", place: "Margem Sul", year: 2025, scope: "Interior + Exterior", img: "/portfolio/predio-novo-1.jpg" },
+  { n: "004", title: "Cozinha moderna", place: "Alcochete", year: 2024, scope: "Interior + LED", img: "/portfolio/hero-cozinha.jpeg" },
+  { n: "005", title: "Moradia tradicional", place: "Setúbal", year: 2024, scope: "Exterior", img: "/portfolio/01-moradia-tradicional.jpg" },
+  { n: "006", title: "Edifício moderno", place: "Lisboa", year: 2025, scope: "Fachada", img: "/portfolio/02-edificio-moderno.jpg" },
+  { n: "007", title: "Apartamento T3", place: "Montijo", year: 2024, scope: "Interior completo", img: "/portfolio/03-apartamento-interior.jpg" },
+  { n: "008", title: "Moradia moderna", place: "Palmela", year: 2023, scope: "Interior + Exterior", img: "/portfolio/04-moradia-moderna.jpg" },
+  { n: "009", title: "Vivenda clássica", place: "Pinhal Novo", year: 2023, scope: "Fachada + Telhado", img: "/portfolio/05-moradia-amarela.jpg" },
+  { n: "010", title: "Hall de entrada", place: "Alcochete", year: 2023, scope: "Interior", img: "/portfolio/06-hall-moderno.jpg" },
 ] as const;
 
 export const PROCESS_STEPS = [
   { n: "01", title: "Visita", body: "Vamos a sua casa, ouvimos o que pretende. Sem custo, sem compromisso." },
-  { n: "02", title: "Orçamento", body: "Em 48h recebe proposta detalhada: m², tintas escolhidas, prazo e preço fechado." },
+  { n: "02", title: "Orçamento", body: "Em 48h recebe o seu orçamento: tintas escolhidas, m², prazo e preço fechado por escrito." },
   { n: "03", title: "Execução", body: "Protegemos móveis e pavimentos. Pintamos. Limpamos. Entregamos a sua casa como a recebemos." },
   { n: "04", title: "Garantia", body: "2 anos de garantia escrita em qualquer acabamento interior. 5 anos em fachadas." },
 ] as const;

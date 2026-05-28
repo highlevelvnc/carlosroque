@@ -42,3 +42,17 @@ next-env.d.ts
 
 # Claude Code
 /.claude/
+
+# Pastas de fotos cruas do cliente (usamos cópias renomeadas em public/portfolio/)
+/public/carloslojasandronaavenidaliberdade/
+/public/carlosmajeparisemlisboa/
+/public/carlospredionovopinturainterioreexterior/
+/public/.DS_Store
+
+# Logos antigas e ficheiros não usados em public/
+/public/ChatGPT*.png
+/public/id1.png
+/public/logo.png
+/public/logocertacr.png
+/public/logocertacr - cópia.png
+/public/carlosroquesemfundo.png
