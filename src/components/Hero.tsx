@@ -60,7 +60,7 @@ export default function Hero() {
             data-reveal data-reveal-delay="700"
             className="lg:col-span-5 text-lg lg:text-xl text-[#A6A29A] leading-relaxed max-w-prose"
           >
-            Acabamentos profissionais para a tua casa, escritório ou loja. Orçamento honesto em 48h,
+            Acabamentos profissionais para a sua casa, escritório ou loja. Orçamento honesto em 48h,
             garantia escrita até <span className="text-[#F2F0EC]">5 anos</span>. Tratamos da pintura para
             tu tratares do resto.
           </p>

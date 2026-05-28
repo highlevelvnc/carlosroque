@@ -42,7 +42,7 @@ export default function Projects() {
             </h2>
           </div>
           <p data-reveal data-reveal-delay="200" className="text-[#A6A29A] max-w-md">
-            Cada linha é uma obra que pintámos. Passa o rato (ou toca) para ver o resultado. Sem stock photos, sem render — clientes reais que aceitaram partilhar.
+            Cada linha é uma obra que pintámos. Passe o rato (ou toque) para ver o resultado. Sem stock photos, sem render — clientes reais que aceitaram partilhar.
           </p>
         </div>
       </div>
@@ -98,7 +98,7 @@ export default function Projects() {
           {/* end card */}
           <div className="bg-[#0E0E10] w-[400px] flex flex-col justify-center items-center p-12 text-center">
             <div className="font-mono text-xs text-[#A6A29A] mb-4">··· e mais 306 obras</div>
-            <h3 className="font-display text-3xl mb-4">A próxima pode ser a tua.</h3>
+            <h3 className="font-display text-3xl mb-4">A próxima pode ser a sua.</h3>
             <a href="#contacto" className="btn-primary mt-4">Falar com o Carlos →</a>
           </div>
         </div>

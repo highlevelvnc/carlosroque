@@ -264,7 +264,7 @@ function Services() {
             </h2>
           </div>
           <p className="lg:col-span-5 lg:col-start-8 self-end text-[#F4F1EB]/70">
-            Da pequena reparação ao chave-na-mão. Sempre com tinta de marca (CIN, Robbialac, Dyrup) e garantia escrita.
+            Da pequena reparação ao chave-na-mão. Sempre com tinta de marca (CIN, Robbialac, Sotinco) e garantia escrita.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

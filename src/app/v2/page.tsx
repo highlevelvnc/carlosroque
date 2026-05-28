@@ -170,7 +170,7 @@ function ServicesV2() {
             </h2>
           </div>
           <p className="lg:col-span-5 lg:col-start-8 self-end text-lg text-white/70 leading-relaxed">
-            Trabalhamos em casas, apartamentos, escritórios e lojas. Sempre com tinta de marca (CIN, Robbialac, Dyrup) e garantia escrita.
+            Trabalhamos em casas, apartamentos, escritórios e lojas. Sempre com tinta de marca (CIN, Robbialac, Sotinco) e garantia escrita.
           </p>
         </div>
 

@@ -23,7 +23,7 @@ export default function BeforeAfter() {
               {"// "}antes / depois
             </span>
             <h2 className="font-display text-5xl lg:text-7xl mt-4">
-              Arrasta. <span className="italic text-[#A6A29A]">Vê a diferença.</span>
+              Arraste. <span className="italic text-[#A6A29A]">Veja a diferença.</span>
             </h2>
           </div>
           <p data-reveal data-reveal-delay="200" className="lg:col-span-5 lg:col-start-8 text-[#A6A29A] self-end text-lg">

@@ -12,7 +12,7 @@ export default function Services() {
             </span>
           </div>
           <p data-reveal data-reveal-delay="200" className="lg:col-span-5 lg:col-start-8 text-[#A6A29A] text-lg leading-relaxed self-end">
-            Trabalhamos em casas particulares, escritórios e espaços comerciais. Sempre com tinta de marca (CIN, Robbialac, Dyrup) e garantia escrita no orçamento.
+            Trabalhamos em casas particulares, escritórios e espaços comerciais. Sempre com tinta de marca (CIN, Robbialac, Sotinco) e garantia escrita no orçamento.
           </p>
         </div>
 

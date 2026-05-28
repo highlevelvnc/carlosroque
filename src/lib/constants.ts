@@ -84,8 +84,8 @@ export const PROJECTS = [
 ] as const;
 
 export const PROCESS_STEPS = [
-  { n: "01", title: "Visita", body: "Vamos a tua casa, medimos paredes, ouvimos o que queres. Sem custo, sem compromisso." },
-  { n: "02", title: "Orçamento", body: "Em 48h recebes proposta detalhada: m², tintas escolhidas, prazo e preço fechado." },
+  { n: "01", title: "Visita", body: "Vamos a sua casa, ouvimos o que pretende. Sem custo, sem compromisso." },
+  { n: "02", title: "Orçamento", body: "Em 48h recebe proposta detalhada: m², tintas escolhidas, prazo e preço fechado." },
   { n: "03", title: "Execução", body: "Protegemos móveis e pavimentos. Pintamos. Limpamos. Entregamos a sua casa como a recebemos." },
   { n: "04", title: "Garantia", body: "2 anos de garantia escrita em qualquer acabamento interior. 5 anos em fachadas." },
 ] as const;

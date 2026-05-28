@@ -13,7 +13,7 @@ export default function Zones() {
               Margem sul <span className="italic text-[#A6A29A]">e Lisboa</span>.
             </h2>
             <p className="text-[#A6A29A] mt-6 leading-relaxed">
-              Sede em {COMPANY.address}. Vamos a qualquer ponto num raio de 40 km sem custo de deslocação. Para fora desta área, fala connosco — costumamos encontrar uma solução.
+              Sede em {COMPANY.address}. Vamos a qualquer ponto num raio de 40 km sem custo de deslocação. Para fora desta área, fale connosco — costumamos encontrar uma solução.
             </p>
           </div>
 

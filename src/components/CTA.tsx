@@ -16,10 +16,10 @@ export default function CTA() {
         </span>
         <h2 data-reveal data-reveal-delay="100" className="font-display text-[clamp(3rem,9vw,9rem)] mt-6 text-[#0E0E10] leading-[0.9]">
           Pronto para
-          <span className="italic block">pintar a tua casa?</span>
+          <span className="italic block">pintar a sua casa?</span>
         </h2>
         <p data-reveal data-reveal-delay="250" className="text-[#0E0E10]/80 text-lg lg:text-xl mt-8 max-w-xl mx-auto">
-          Envia uma mensagem agora. Respondemos em menos de 4 horas em dia útil. Visita à tua casa em 48h, orçamento por escrito no mesmo dia.
+          Envie uma mensagem agora. Respondemos em menos de 4 horas em dia útil. Visita à sua casa em 48h, orçamento por escrito no mesmo dia.
         </p>
         <div data-reveal data-reveal-delay="400" className="mt-12 flex flex-wrap gap-4 justify-center items-center">
           <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="inline-flex items-center gap-3 bg-[#0E0E10] text-[#F2F0EC] px-8 py-5 rounded-full font-medium hover:bg-[#16161A] transition">

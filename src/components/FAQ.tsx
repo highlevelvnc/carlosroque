@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: "Os materiais estão incluídos?",
-    a: "Sim. Todos os orçamentos incluem tinta de marca (CIN, Robbialac, Dyrup), primário, massa, fitas, plásticos de protecção e mão-de-obra. Sem extras escondidos.",
+    a: "Sim. Todos os orçamentos incluem tinta de marca (CIN, Robbialac, Sotinco), primário, massa, fitas, plásticos de protecção e mão-de-obra. Sem extras escondidos.",
   },
   {
     q: "Fazem pinturas exteriores em prédios?",

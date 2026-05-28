@@ -20,11 +20,11 @@ export default function ColorSimulator() {
               {"// "}simulador interactivo
             </span>
             <h2 className="font-display text-5xl lg:text-7xl mt-4">
-              Vê a parede <span className="italic text-[#A6A29A]">antes</span> de a pintar.
+              Veja a parede <span className="italic text-[#A6A29A]">antes</span> de a pintar.
             </h2>
           </div>
           <p data-reveal data-reveal-delay="200" className="text-[#A6A29A] max-w-sm">
-            Escolhe uma cor abaixo. A divisão muda em tempo real. Quando estiveres confiante, pedimos o orçamento já com a cor escolhida.
+            Escolha uma cor abaixo. A divisão muda em tempo real. Quando estiver confiante, pedimos o orçamento já com a cor escolhida.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export default function ColorSimulator() {
               );
             })}
             <p className="text-xs text-[#A6A29A] mt-3 leading-relaxed">
-              Tens uma cor específica em mente? <a href={buildWhatsappUrl("Olá Carlos, tenho uma cor específica em mente. Posso enviar uma foto?")} target="_blank" rel="noopener" className="text-[#F2F0EC] link-underline">Envia-nos uma foto</a> — combinamos qualquer tinta de catálogo CIN, Robbialac ou Dyrup.
+              Tem uma cor específica em mente? <a href={buildWhatsappUrl("Olá Carlos, tenho uma cor específica em mente. Posso enviar uma foto?")} target="_blank" rel="noopener" className="text-[#F2F0EC] link-underline">Envie-nos uma foto</a> — combinamos qualquer tinta de catálogo CIN, Robbialac ou Sotinco.
             </p>
           </div>
         </div>

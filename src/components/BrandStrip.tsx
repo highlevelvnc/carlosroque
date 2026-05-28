@@ -1,4 +1,4 @@
-const BRANDS = ["CIN", "Robbialac", "Dyrup", "Cinco Tintas", "Sikkens", "Bondex", "CIN", "Robbialac", "Dyrup", "Cinco Tintas", "Sikkens", "Bondex"];
+const BRANDS = ["CIN", "Robbialac", "Sotinco", "Cinco Tintas", "Sikkens", "Bondex", "CIN", "Robbialac", "Sotinco", "Cinco Tintas", "Sikkens", "Bondex"];
 
 export default function BrandStrip({
   bg = "#0E0E10",
