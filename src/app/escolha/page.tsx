@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const V1_URL = "/";
 const V2_URL = "/v2";
+const V3_URL = "/v3";
 
 const VERSIONS = [
   {
@@ -53,6 +54,27 @@ const VERSIONS = [
     accent: "#156B6B",
     badge: "fotográfico",
   },
+  {
+    tag: "Versão 03",
+    name: "Navy Corporate",
+    subtitle: "Azul profundo · sans pesada · confiança",
+    description:
+      "Site em navy profundo com sans condensada (Inter Tight), grid arquitectónico e accent dourado nos CTAs. Posiciona o Carlos como empresa de pintura sólida e profissional — perfeito para apelar a clientes B2B (escritórios, lojas, condomínios) sem perder os particulares.",
+    bullets: [
+      "Navy #0F2433 (da logo) dominante, teal claro como accent",
+      "Tipografia Inter Tight 800 — confiança corporativa",
+      "Grid arquitectónico, foto-card de obra em destaque",
+      "Banda KPI com números chave (15+/312/48h/5★)",
+      "CTAs em mostarda quente, alto contraste",
+    ],
+    palette: ["#0F2433", "#16314A", "#4FB8C9", "#E8B86A"],
+    paletteNames: ["Navy", "Navy raised", "Teal", "Mostarda"],
+    iframeUrl: V3_URL,
+    liveUrl: V3_URL,
+    waMessage: `Olá Carlos, gostei da versão 03 (Navy Corporate) — a do azul profundo. Queria avançar com esta. Quando podemos falar?`,
+    accent: "#4FB8C9",
+    badge: "corporate",
+  },
 ];
 
 export default function EscolhaPage() {
@@ -76,14 +98,14 @@ export default function EscolhaPage() {
           <div className="grid lg:grid-cols-12 gap-8 items-end">
             <div className="lg:col-span-8">
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#FF5B2E] font-mono">
-                {"// "}duas propostas exclusivas, uma decisão
+                {"// "}três propostas exclusivas, uma decisão
               </span>
               <h1 className="font-display text-[clamp(3rem,9vw,8rem)] mt-4 leading-[0.9]">
                 Carlos, <span className="italic text-[#A6A29A]">qual</span> levas?
               </h1>
             </div>
             <p className="lg:col-span-4 text-[#A6A29A] text-lg leading-relaxed">
-              Construímos duas direcções <span className="text-[#1F9A9A]">novas</span> para o seu site — ambas com as suas fotos reais. Veja-as em baixo lado a lado e escolha aquela com que mais se identifica.
+              Construímos <span className="text-[#1F9A9A]">três direcções</span> para o seu site — todas com as suas fotos reais. Veja-as em baixo lado a lado e escolha aquela com que mais se identifica.
             </p>
           </div>
 
@@ -99,7 +121,7 @@ export default function EscolhaPage() {
 
       {/* Comparativo */}
       <section className="px-6 lg:px-12 pb-32">
-        <div className="max-w-[1800px] mx-auto grid lg:grid-cols-2 gap-8">
+        <div className="max-w-[2000px] mx-auto grid lg:grid-cols-3 gap-6 lg:gap-8">
           {VERSIONS.map((v, i) => (
             <article
               key={v.name}
@@ -133,15 +155,15 @@ export default function EscolhaPage() {
                     {v.iframeUrl.startsWith("http") ? v.iframeUrl : "carlosroquepinturas.pt"}
                   </span>
                 </div>
-                <div className="relative w-full h-[520px] overflow-hidden">
+                <div className="relative w-full h-[440px] overflow-hidden">
                   <iframe
                     src={v.iframeUrl}
                     title={v.name}
                     className="absolute top-0 left-0"
                     style={{
-                      width: "166%",
-                      height: "166%",
-                      transform: "scale(0.6)",
+                      width: "200%",
+                      height: "200%",
+                      transform: "scale(0.5)",
                       transformOrigin: "0 0",
                       border: 0,
                     }}
