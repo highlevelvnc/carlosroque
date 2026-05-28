@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { WHATSAPP_URL } from "@/lib/constants";
+import CountUp from "@/components/CountUp";
 
 export default function Hero() {
   return (
@@ -77,8 +78,8 @@ export default function Hero() {
           </div>
 
           <div data-reveal data-reveal-delay="1000" className="lg:col-span-3 font-mono text-xs text-[#A6A29A] grid grid-cols-2 gap-y-2">
-            <span className="text-[#F2F0EC] text-2xl font-display">15+</span>
-            <span className="text-[#F2F0EC] text-2xl font-display">312</span>
+            <CountUp to={15} suffix="+" className="text-[#F2F0EC] text-2xl font-display" />
+            <CountUp to={312} className="text-[#F2F0EC] text-2xl font-display" />
             <span>anos a pintar</span>
             <span>obras entregues</span>
             <span className="text-[#F2F0EC] text-2xl font-display">48h</span>

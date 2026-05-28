@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { COMPANY, NAV_LINKS, PROJECTS, SERVICES, TESTIMONIALS, ZONES, WHATSAPP_URL, buildWhatsappUrl } from "@/lib/constants";
 import BrandStrip from "@/components/BrandStrip";
+import CountUp from "@/components/CountUp";
+import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
 
 const HERO_IMG = "/portfolio/hero-cozinha.jpeg";
 const SECTION_IMG = "/portfolio/05-moradia-amarela.jpg";
@@ -9,6 +11,7 @@ const SECTION_IMG = "/portfolio/05-moradia-amarela.jpg";
 export default function V2Page() {
   return (
     <main>
+      <ScrollProgress color="#156B6B" />
       <Header />
       <Hero />
       <Strip />
@@ -25,6 +28,7 @@ export default function V2Page() {
       <TestimonialsV2 />
       <CTAV2 />
       <FooterV2 />
+      <BackToTop bg="#156B6B" ink="#F5F2EC" />
     </main>
   );
 }
@@ -53,7 +57,7 @@ function Header() {
 function Hero() {
   return (
     <section className="relative h-screen min-h-[720px] overflow-hidden">
-      <Image src={HERO_IMG} alt="Interior pintado pela Carlos Roque" fill priority className="object-cover" sizes="100vw" />
+      <Image src={HERO_IMG} alt="Interior pintado pela Carlos Roque" fill priority className="object-cover animate-kenburns" sizes="100vw" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
       <div className="absolute inset-x-0 bottom-0 px-6 lg:px-12 pb-16 lg:pb-24">
         <div className="max-w-[1600px] mx-auto">
@@ -91,13 +95,13 @@ function Strip() {
     <section className="bg-[#0E0E10] text-white py-8 overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12">
         {[
-          { n: "15+", label: "anos de experiência" },
-          { n: "312", label: "obras concluídas" },
-          { n: "48h", label: "tempo de resposta" },
-          { n: "5★", label: "média no Google" },
+          { value: 15, suffix: "+", label: "anos de experiência" },
+          { value: 312, suffix: "", label: "obras concluídas" },
+          { value: 48, suffix: "h", label: "tempo de resposta" },
+          { value: 5, suffix: "★", label: "média no Google" },
         ].map((s) => (
           <div key={s.label} className="flex items-baseline gap-3">
-            <span className="font-display text-4xl lg:text-6xl">{s.n}</span>
+            <CountUp to={s.value} suffix={s.suffix} className="font-display text-4xl lg:text-6xl" />
             <span className="text-xs uppercase tracking-widest opacity-60">{s.label}</span>
           </div>
         ))}

@@ -7,6 +7,9 @@ import {
 import PortfolioCarousel from "@/components/PortfolioCarousel";
 import BrandStrip from "@/components/BrandStrip";
 import LoadingScreen from "@/components/LoadingScreen";
+import CountUp from "@/components/CountUp";
+import FAQ from "@/components/FAQ";
+import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
 
 // V3 palette — navy/azul corporate
 // Primary: #0F2433 (deep navy, do logo slate)
@@ -21,6 +24,7 @@ export default function V3Page() {
   return (
     <main>
       <LoadingScreen variant="fill" themeKey="v3" sessionKey="cr-v3-loaded" tagline="A pintura que a sua casa merece." />
+      <ScrollProgress color="#4FB8C9" />
       <Header />
       <Hero />
       <KPIBand />
@@ -37,8 +41,17 @@ export default function V3Page() {
       <Process />
       <ZonesSection />
       <Testimonials />
+      <FAQ
+        accent="#4FB8C9"
+        text="#F4F1EB"
+        textDim="#A6B0BA"
+        surface="#16314A"
+        border="rgba(255,255,255,0.08)"
+        display={DISPLAY}
+      />
       <CTA />
       <Footer />
+      <BackToTop bg="#4FB8C9" ink="#0F2433" />
     </main>
   );
 }
@@ -141,17 +154,17 @@ function Hero() {
 
 function KPIBand() {
   const items = [
-    { n: "15+", label: "anos no terreno" },
-    { n: "312", label: "obras entregues" },
-    { n: "48h", label: "para orçamento" },
-    { n: "5★", label: "média Google" },
+    { value: 15, suffix: "+", label: "anos no terreno" },
+    { value: 312, suffix: "", label: "obras entregues" },
+    { value: 48, suffix: "h", label: "para orçamento" },
+    { value: 5, suffix: "★", label: "média Google" },
   ];
   return (
     <section className="bg-[#16314A] border-y border-white/10">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-10 grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
         {items.map((it, i) => (
           <div key={it.label} className={`${i === 0 ? "pl-0" : "pl-6 lg:pl-12"} flex flex-col gap-1`}>
-            <div className="text-4xl lg:text-6xl text-[#4FB8C9]" style={DISPLAY}>{it.n}</div>
+            <CountUp to={it.value} suffix={it.suffix} className="text-4xl lg:text-6xl text-[#4FB8C9]" style={DISPLAY} />
             <div className="text-xs uppercase tracking-widest text-[#F4F1EB]/60">{it.label}</div>
           </div>
         ))}

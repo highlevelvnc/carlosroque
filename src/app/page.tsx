@@ -14,11 +14,13 @@ import WhatsappFAB from "@/components/WhatsappFAB";
 import RevealProvider from "@/components/RevealProvider";
 import BrandStrip from "@/components/BrandStrip";
 import LoadingScreen from "@/components/LoadingScreen";
+import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
 
 export default function Home() {
   return (
     <>
       <LoadingScreen variant="brush" themeKey="v1" sessionKey="cr-v1-loaded" tagline="Acabamentos que duram. Pintores que ouvem." />
+      <ScrollProgress color="#1F9A9A" />
       <RevealProvider />
       <Header />
       <main>
@@ -36,6 +38,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsappFAB />
+      <BackToTop bg="#1F9A9A" ink="#0E0E10" />
     </>
   );
 }
