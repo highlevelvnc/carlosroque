@@ -7,9 +7,7 @@ export default function Footer() {
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-12 mb-20">
           <div className="lg:col-span-5">
-            <span className="inline-flex items-center bg-white rounded-full px-4 py-2.5 mb-8 shadow-lg">
-              <Image src="/logocertacr.png" alt={COMPANY.name} width={320} height={160} className="h-10 sm:h-12 w-auto object-contain" />
-            </span>
+            <Image src="/carlosroque.png" alt={COMPANY.name} width={400} height={200} className="h-16 sm:h-20 w-auto object-contain mb-8" style={{ filter: "brightness(1.35) contrast(1.05) drop-shadow(0 2px 12px rgba(79,184,201,0.35))" }} />
             <div className="font-display text-[clamp(2.5rem,7vw,6rem)] leading-[0.85] text-[#F2F0EC]">
               Carlos
               <span className="block italic text-[#A6A29A]">Roque</span>

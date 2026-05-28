@@ -91,9 +91,7 @@ export default function EscolhaPage() {
         />
         <div className="max-w-[1600px] mx-auto relative">
           <div className="flex items-center gap-3 mb-8 sm:mb-12">
-            <span className="inline-flex items-center bg-white/95 backdrop-blur rounded-full px-3 py-1.5 shadow-lg">
-              <Image src="/logocertacr.png" alt={COMPANY.name} width={240} height={120} className="h-9 sm:h-10 w-auto object-contain" priority />
-            </span>
+            <Image src="/carlosroque.png" alt={COMPANY.name} width={320} height={160} className="h-12 sm:h-14 w-auto object-contain" style={{ filter: "brightness(1.35) contrast(1.05) drop-shadow(0 2px 12px rgba(79,184,201,0.4))" }} priority />
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#A6A29A] border-l border-[#2A2A2F] pl-3">
               apresentação · privado
             </span>

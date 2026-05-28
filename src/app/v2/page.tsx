@@ -35,9 +35,7 @@ function Header() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-transparent pointer-events-none" />
       <div className="relative max-w-[1600px] mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
         <Link href="/v2" className="flex items-center gap-3">
-          <span className="inline-flex items-center bg-white/95 backdrop-blur rounded-full px-3 py-1.5 shadow-lg">
-            <Image src="/logocertacr.png" alt={COMPANY.name} width={240} height={120} className="h-8 w-auto object-contain" priority />
-          </span>
+          <Image src="/carlosroque.png" alt={COMPANY.name} width={320} height={160} className="h-12 w-auto object-contain" style={{ filter: "drop-shadow(0 4px 18px rgba(0,0,0,0.55)) drop-shadow(0 0 2px rgba(255,255,255,0.6))" }} priority />
         </Link>
         <nav className="hidden lg:flex items-center gap-10 text-sm">
           {NAV_LINKS.map((l) => (
@@ -317,9 +315,7 @@ function FooterV2() {
     <footer id="contacto-footer" className="bg-[#0E0E10] text-white py-16">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 grid lg:grid-cols-3 gap-12">
         <div>
-          <span className="inline-flex items-center bg-white rounded-full px-4 py-2 mb-4 shadow-lg">
-            <Image src="/logocertacr.png" alt={COMPANY.name} width={280} height={140} className="h-10 w-auto object-contain" />
-          </span>
+          <Image src="/carlosroque.png" alt={COMPANY.name} width={360} height={180} className="h-14 w-auto object-contain mb-4" style={{ filter: "brightness(1.35) contrast(1.05) drop-shadow(0 2px 12px rgba(79,184,201,0.35))" }} />
           <div className="font-display text-3xl">{COMPANY.short}</div>
           <div className="text-sm opacity-60 mt-1">Pintura interior e exterior · desde {COMPANY.founded}</div>
         </div>

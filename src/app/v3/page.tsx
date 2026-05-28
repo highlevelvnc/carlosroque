@@ -46,9 +46,7 @@ function Header() {
     <header className="fixed top-0 inset-x-0 z-30 bg-[#0F2433]/90 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
         <Link href="/v3" className="flex items-center gap-3">
-          <span className="inline-flex items-center bg-white rounded-md px-2.5 py-1.5">
-            <Image src="/logocertacr.png" alt={COMPANY.name} width={240} height={120} className="h-9 w-auto object-contain" priority />
-          </span>
+          <Image src="/carlosroque.png" alt={COMPANY.name} width={320} height={160} className="h-11 w-auto object-contain" style={{ filter: "brightness(1.4) contrast(1.05) drop-shadow(0 2px 10px rgba(79,184,201,0.4))" }} priority />
           <div className="hidden md:inline-flex items-center text-[10px] uppercase tracking-[0.2em] text-[#4FB8C9]/80 border-l border-white/15 pl-3">
             desde {COMPANY.founded}
           </div>
@@ -386,9 +384,7 @@ function Footer() {
     <footer className="bg-[#0A1A26] py-16 border-t border-white/10">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 grid lg:grid-cols-3 gap-10">
         <div>
-          <span className="inline-flex items-center bg-white rounded-md px-3 py-2 mb-4">
-            <Image src="/logocertacr.png" alt={COMPANY.name} width={280} height={140} className="h-11 w-auto object-contain" />
-          </span>
+          <Image src="/carlosroque.png" alt={COMPANY.name} width={360} height={180} className="h-14 w-auto object-contain mb-4" style={{ filter: "brightness(1.4) contrast(1.05) drop-shadow(0 2px 10px rgba(79,184,201,0.4))" }} />
           <div>
             <div className="text-base font-semibold" style={DISPLAY}>{COMPANY.short}</div>
             <div className="text-[10px] uppercase tracking-widest text-[#4FB8C9]/80">desde {COMPANY.founded}</div>

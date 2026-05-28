@@ -22,16 +22,15 @@ export default function Header() {
     >
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3 group">
-          <span className="relative inline-flex items-center bg-white/95 rounded-full px-3 py-1.5 shadow-md group-hover:bg-white transition">
-            <Image
-              src="/logocertacr.png"
-              alt={COMPANY.name}
-              width={240}
-              height={120}
-              className="h-8 sm:h-9 w-auto object-contain"
-              priority
-            />
-          </span>
+          <Image
+            src="/carlosroque.png"
+            alt={COMPANY.name}
+            width={320}
+            height={160}
+            className="h-10 sm:h-12 w-auto object-contain transition group-hover:scale-[1.02]"
+            style={{ filter: "brightness(1.35) contrast(1.05) drop-shadow(0 2px 12px rgba(79,184,201,0.35))" }}
+            priority
+          />
           <span className="hidden md:inline-block text-[10px] uppercase tracking-[0.2em] text-[#A6A29A] border-l border-[#2A2A2F] pl-3">
             est. {COMPANY.founded}
           </span>
