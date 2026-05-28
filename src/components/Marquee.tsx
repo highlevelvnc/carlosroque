@@ -11,7 +11,7 @@ export default function Marquee() {
         {loop.map((item, i) => (
           <span key={i} className="flex items-center gap-10 px-6">
             <span className="font-display text-3xl lg:text-5xl text-[#F2F0EC]">{item}</span>
-            <span className="text-[#FF5B2E] text-2xl">✺</span>
+            <span className="text-[#1F9A9A] text-2xl">✺</span>
           </span>
         ))}
       </div>

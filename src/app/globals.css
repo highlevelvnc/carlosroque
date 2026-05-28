@@ -7,7 +7,7 @@
   --color-line: #2A2A2F;
   --color-ink: #F2F0EC;
   --color-ink-dim: #A6A29A;
-  --color-accent: #FF5B2E;
+  --color-accent: #1F9A9A;
   --color-accent-2: #C9A961;
   --color-teal: #1F9A9A;
   --color-teal-deep: #156B6B;
@@ -85,7 +85,7 @@ body {
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px -10px rgba(255, 91, 46, 0.6);
+  box-shadow: 0 12px 30px -10px rgba(31, 154, 154, 0.55);
 }
 
 .btn-ghost {

@@ -4,8 +4,8 @@ export default function CTA() {
   return (
     <section id="contacto" className="relative py-32 lg:py-48 overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#FF5B2E] via-[#C8623E] to-[#1B2A41]" />
-        <div className="absolute inset-0 opacity-30 mix-blend-overlay" style={{
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1F9A9A] via-[#156B6B] to-[#0F2433]" />
+        <div className="absolute inset-0 opacity-25 mix-blend-overlay" style={{
           backgroundImage: "radial-gradient(circle at 20% 30%, #000 0%, transparent 60%), radial-gradient(circle at 80% 70%, #fff 0%, transparent 60%)",
         }} />
       </div>

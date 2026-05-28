@@ -6,7 +6,7 @@ export default function Process() {
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-8 mb-16">
           <div data-reveal className="lg:col-span-7">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#FF5B2E] font-mono">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#1F9A9A] font-mono">
               {"// "}como trabalhamos
             </span>
             <h2 className="font-display text-5xl lg:text-7xl mt-4">
@@ -23,13 +23,13 @@ export default function Process() {
               data-reveal-delay={String(i * 120)}
               className="bg-[#0E0E10] p-8 lg:p-10 min-h-[320px] flex flex-col justify-between relative"
             >
-              <div className="font-mono text-xs text-[#FF5B2E]">{s.n}</div>
+              <div className="font-mono text-xs text-[#1F9A9A]">{s.n}</div>
               <div>
                 <h3 className="font-display text-4xl mb-3">{s.title}</h3>
                 <p className="text-sm text-[#A6A29A] leading-relaxed">{s.body}</p>
               </div>
               {i < PROCESS_STEPS.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-3 h-3 rotate-45 border-r border-t border-[#FF5B2E] z-10" />
+                <div className="hidden lg:block absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-3 h-3 rotate-45 border-r border-t border-[#1F9A9A] z-10" />
               )}
             </div>
           ))}

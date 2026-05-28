@@ -16,7 +16,7 @@ export default function ColorSimulator() {
         {/* section header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <div data-reveal className="max-w-2xl">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#FF5B2E] font-mono">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#1F9A9A] font-mono">
               {"// "}simulador interactivo
             </span>
             <h2 className="font-display text-5xl lg:text-7xl mt-4">
@@ -35,7 +35,7 @@ export default function ColorSimulator() {
             {/* HUD */}
             <div className="absolute top-5 left-5 right-5 flex items-center justify-between text-xs font-mono uppercase tracking-[0.2em] text-[#F2F0EC]/80">
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#FF5B2E]" />
+                <span className="w-2 h-2 rounded-full bg-[#1F9A9A]" />
                 preview ao vivo
               </span>
               <span className="hidden sm:inline">sala · 18m² · 4 paredes</span>
@@ -70,7 +70,7 @@ export default function ColorSimulator() {
                   onClick={() => setColor(s)}
                   className={`group flex items-center gap-4 p-3 rounded-xl border transition-all text-left ${
                     active
-                      ? "border-[#FF5B2E] bg-[#1A1A1E]"
+                      ? "border-[#1F9A9A] bg-[#1A1A1E]"
                       : "border-[#2A2A2F] hover:border-[#A6A29A] bg-transparent"
                   }`}
                 >
@@ -82,7 +82,7 @@ export default function ColorSimulator() {
                     <span className="block text-[#F2F0EC] font-medium">{s.name}</span>
                     <span className="block text-xs text-[#A6A29A] mt-0.5">{s.mood}</span>
                   </span>
-                  <span className={`font-mono text-[10px] uppercase tracking-wider transition-opacity ${active ? "text-[#FF5B2E]" : "text-[#A6A29A] opacity-0 group-hover:opacity-100"}`}>
+                  <span className={`font-mono text-[10px] uppercase tracking-wider transition-opacity ${active ? "text-[#1F9A9A]" : "text-[#A6A29A] opacity-0 group-hover:opacity-100"}`}>
                     {active ? "activa" : "ver"}
                   </span>
                 </button>
@@ -148,7 +148,7 @@ function RoomSvg({ wallColor }: { wallColor: string }) {
 
       {/* frame on wall */}
       <rect x="420" y="320" width="220" height="280" fill="#1a1a1e" stroke="#0E0E10" strokeWidth="6" />
-      <rect x="440" y="340" width="180" height="240" fill="#FF5B2E" opacity="0.85" />
+      <rect x="440" y="340" width="180" height="240" fill="#1F9A9A" opacity="0.85" />
 
       {/* sofa */}
       <rect x="430" y="700" width="420" height="120" rx="14" fill="#2a2422" />

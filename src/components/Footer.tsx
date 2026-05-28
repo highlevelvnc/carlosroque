@@ -11,14 +11,14 @@ export default function Footer() {
             <div className="font-display text-[clamp(2.5rem,7vw,6rem)] leading-[0.85] text-[#F2F0EC]">
               Carlos
               <span className="block italic text-[#A6A29A]">Roque</span>
-              <span className="block text-[#FF5B2E]">Pinturas.</span>
+              <span className="block text-[#1F9A9A]">Pinturas.</span>
             </div>
           </div>
 
           <div className="lg:col-span-3 flex flex-col gap-3 text-sm">
             <div className="text-[10px] uppercase tracking-[0.25em] text-[#A6A29A] mb-1 font-mono">Navegação</div>
             {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} className="text-[#F2F0EC] hover:text-[#FF5B2E] transition-colors w-fit link-underline">
+              <a key={l.href} href={l.href} className="text-[#F2F0EC] hover:text-[#1F9A9A] transition-colors w-fit link-underline">
                 {l.label}
               </a>
             ))}
@@ -26,10 +26,10 @@ export default function Footer() {
 
           <div className="lg:col-span-4 flex flex-col gap-3 text-sm">
             <div className="text-[10px] uppercase tracking-[0.25em] text-[#A6A29A] mb-1 font-mono">Contacto</div>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="text-[#F2F0EC] hover:text-[#FF5B2E] transition">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="text-[#F2F0EC] hover:text-[#1F9A9A] transition">
               WhatsApp · {COMPANY.phone}
             </a>
-            <a href={`mailto:${COMPANY.email}`} className="text-[#F2F0EC] hover:text-[#FF5B2E] transition">{COMPANY.email}</a>
+            <a href={`mailto:${COMPANY.email}`} className="text-[#F2F0EC] hover:text-[#1F9A9A] transition">{COMPANY.email}</a>
             <div className="text-[#A6A29A]">{COMPANY.address}</div>
             <div className="text-[#A6A29A]">{COMPANY.hours}</div>
           </div>

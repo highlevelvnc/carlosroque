@@ -34,7 +34,7 @@ export default function Projects() {
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 mb-16">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div data-reveal>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#FF5B2E] font-mono">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#1F9A9A] font-mono">
               {"// "}índice de obras
             </span>
             <h2 className="font-display text-5xl lg:text-7xl mt-4 max-w-[18ch]">
@@ -84,7 +84,7 @@ export default function Projects() {
                   <span className="font-mono text-xs text-[#A6A29A]">{p.year}</span>
                 </div>
                 <div className="relative p-8">
-                  <div className="text-[10px] uppercase tracking-[0.25em] text-[#FF5B2E] font-mono mb-3">
+                  <div className="text-[10px] uppercase tracking-[0.25em] text-[#1F9A9A] font-mono mb-3">
                     {p.scope}
                   </div>
                   <h3 className={`font-display transition-all duration-500 ${isHover ? "text-5xl" : "text-3xl"}`}>
@@ -114,7 +114,7 @@ export default function Projects() {
               <span>{p.n}</span><span>{p.year}</span>
             </div>
             <div className="relative p-8">
-              <div className="text-[10px] uppercase tracking-[0.25em] text-[#FF5B2E] font-mono mb-2">{p.scope}</div>
+              <div className="text-[10px] uppercase tracking-[0.25em] text-[#1F9A9A] font-mono mb-2">{p.scope}</div>
               <h3 className="font-display text-3xl">{p.title}</h3>
               <div className="text-sm text-[#A6A29A] mt-1">{p.place}</div>
             </div>

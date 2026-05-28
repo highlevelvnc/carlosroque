@@ -6,7 +6,7 @@ export default function Services() {
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-8 mb-16">
           <div data-reveal className="lg:col-span-5">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#FF5B2E] font-mono">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#1F9A9A] font-mono">
               {"// "}o que fazemos
             </span>
             <h2 className="font-display text-5xl lg:text-7xl mt-4">
@@ -28,7 +28,7 @@ export default function Services() {
             >
               <div className="flex items-start justify-between">
                 <span className="font-mono text-xs text-[#A6A29A]">{s.n}</span>
-                <span className="w-8 h-8 rounded-full border border-[#2A2A2F] flex items-center justify-center text-[#A6A29A] group-hover:bg-[#FF5B2E] group-hover:border-[#FF5B2E] group-hover:text-[#0E0E10] transition-all duration-300">
+                <span className="w-8 h-8 rounded-full border border-[#2A2A2F] flex items-center justify-center text-[#A6A29A] group-hover:bg-[#1F9A9A] group-hover:border-[#1F9A9A] group-hover:text-[#0E0E10] transition-all duration-300">
                   →
                 </span>
               </div>
@@ -36,7 +36,7 @@ export default function Services() {
                 <h3 className="font-display text-3xl lg:text-4xl mb-3">{s.title}</h3>
                 <p className="text-sm text-[#A6A29A] leading-relaxed">{s.body}</p>
               </div>
-              <div className="absolute -bottom-1 left-0 right-0 h-px bg-[#FF5B2E] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+              <div className="absolute -bottom-1 left-0 right-0 h-px bg-[#1F9A9A] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
             </article>
           ))}
         </div>

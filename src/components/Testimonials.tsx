@@ -5,7 +5,7 @@ export default function Testimonials() {
     <section className="py-24 lg:py-40">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div data-reveal className="text-center mb-16 max-w-2xl mx-auto">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#FF5B2E] font-mono">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#1F9A9A] font-mono">
             {"// "}clientes verificados Google
           </span>
           <h2 className="font-display text-5xl lg:text-6xl mt-4">
@@ -19,9 +19,9 @@ export default function Testimonials() {
               key={t.name}
               data-reveal
               data-reveal-delay={String(i * 150)}
-              className="border border-[#2A2A2F] p-8 lg:p-10 rounded-2xl flex flex-col gap-6 hover:border-[#FF5B2E] transition-colors group"
+              className="border border-[#2A2A2F] p-8 lg:p-10 rounded-2xl flex flex-col gap-6 hover:border-[#1F9A9A] transition-colors group"
             >
-              <div className="flex gap-1 text-[#FF5B2E]">
+              <div className="flex gap-1 text-[#1F9A9A]">
                 {"★★★★★".split("").map((s, idx) => <span key={idx}>{s}</span>)}
               </div>
               <p className="font-display text-2xl leading-snug text-[#F2F0EC]">

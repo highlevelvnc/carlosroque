@@ -19,7 +19,7 @@ export default function BeforeAfter() {
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-8 mb-12">
           <div data-reveal className="lg:col-span-6">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#FF5B2E] font-mono">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#1F9A9A] font-mono">
               {"// "}antes / depois
             </span>
             <h2 className="font-display text-5xl lg:text-7xl mt-4">
@@ -85,7 +85,7 @@ export default function BeforeAfter() {
               {/* light from window */}
               <ellipse cx="1100" cy="200" rx="500" ry="400" fill="#ffffff" opacity="0.25" />
             </svg>
-            <div className="absolute top-5 right-5 font-mono text-xs uppercase tracking-[0.25em] bg-[#FF5B2E] text-[#0E0E10] px-3 py-1.5 rounded-full">
+            <div className="absolute top-5 right-5 font-mono text-xs uppercase tracking-[0.25em] bg-[#1F9A9A] text-[#0E0E10] px-3 py-1.5 rounded-full">
               Depois
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function BeforeAfter() {
             className="absolute top-0 bottom-0 w-px bg-[#F2F0EC] pointer-events-none"
             style={{ left: `${pos}%` }}
           >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#FF5B2E] border-4 border-[#F2F0EC] flex items-center justify-center text-[#0E0E10] font-bold">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#1F9A9A] border-4 border-[#F2F0EC] flex items-center justify-center text-[#0E0E10] font-bold">
               ⇆
             </div>
           </div>

@@ -21,11 +21,11 @@ export default function Hero() {
         {/* Accent glows */}
         <div
           className="absolute -top-32 -right-32 w-[700px] h-[700px] rounded-full opacity-25 blur-3xl"
-          style={{ background: "radial-gradient(circle, #FF5B2E 0%, transparent 60%)" }}
+          style={{ background: "radial-gradient(circle, #1F9A9A 0%, transparent 60%)" }}
         />
         <div
           className="absolute -bottom-40 -left-20 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl"
-          style={{ background: "radial-gradient(circle, #1F9A9A 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, #C9A961 0%, transparent 70%)" }}
         />
       </div>
 
@@ -51,7 +51,7 @@ export default function Hero() {
             que duram.
           </span>
           <span data-reveal data-reveal-delay="500" className="block">
-            Pintores que <span className="text-[#FF5B2E] italic">ouvem.</span>
+            Pintores que <span className="text-[#C9A961] italic">ouvem.</span>
           </span>
         </h1>
 
