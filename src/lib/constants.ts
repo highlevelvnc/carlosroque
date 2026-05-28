@@ -72,18 +72,65 @@ export const SERVICES = [
   },
 ] as const;
 
-export const PROJECTS = [
-  { n: "001", title: "Loja Sandro", place: "Av. da Liberdade, Lisboa", year: 2024, scope: "Comercial · Interior", img: "/portfolio/sandro-lisboa-1.jpg" },
-  { n: "002", title: "Loja Maje Paris", place: "Lisboa", year: 2026, scope: "Comercial · Interior", img: "/portfolio/maje-lisboa-1.jpg" },
-  { n: "003", title: "Prédios novos", place: "Margem Sul", year: 2026, scope: "Pintura com airless · em curso", img: "/portfolio/predios-completo.jpg" },
+export type Project = {
+  n: string;
+  title: string;
+  place: string;
+  year: number;
+  scope: string;
+  img: string;
+  gallery?: readonly string[];
+};
+
+export const PROJECTS: readonly Project[] = [
+  {
+    n: "001", title: "Loja Sandro", place: "Av. da Liberdade, Lisboa", year: 2024, scope: "Comercial · Interior",
+    img: "/portfolio/sandro-lisboa-1.jpg",
+    gallery: [
+      "/portfolio/sandro-lisboa-1.jpg",
+      "/portfolio/sandro-lisboa-2.jpg",
+      "/portfolio/sandro-lisboa-3.jpg",
+      "/portfolio/sandro-lisboa-4.jpg",
+      "/portfolio/sandro-lisboa-5.jpg",
+      "/portfolio/sandro-lisboa-6.jpg",
+      "/portfolio/sandro-lisboa-7.jpg",
+      "/portfolio/sandro-lisboa-8.jpg",
+    ],
+  },
+  {
+    n: "002", title: "Loja Maje Paris", place: "Lisboa", year: 2026, scope: "Comercial · Interior",
+    img: "/portfolio/maje-lisboa-1.jpg",
+    gallery: [
+      "/portfolio/maje-lisboa-1.jpg",
+      "/portfolio/maje-lisboa-2.jpg",
+      "/portfolio/maje-lisboa-3.jpg",
+      "/portfolio/maje-lisboa-4.jpg",
+    ],
+  },
+  {
+    n: "003", title: "Prédios novos", place: "Margem Sul", year: 2026, scope: "Pintura com airless · em curso",
+    img: "/portfolio/predios-completo.jpg",
+    gallery: [
+      "/portfolio/predio-novo-1.jpg",
+      "/portfolio/predio-novo-2.jpg",
+      "/portfolio/predio-novo-3.jpg",
+    ],
+  },
   { n: "004", title: "Cozinha moderna", place: "Alcochete", year: 2024, scope: "Interior + LED", img: "/portfolio/hero-cozinha.jpeg" },
   { n: "005", title: "Moradia tradicional", place: "Setúbal", year: 2024, scope: "Exterior", img: "/portfolio/01-moradia-tradicional.jpg" },
   { n: "006", title: "Edifício moderno", place: "Lisboa", year: 2025, scope: "Fachada", img: "/portfolio/02-edificio-moderno.jpg" },
   { n: "007", title: "Apartamento T3", place: "Montijo", year: 2024, scope: "Interior completo", img: "/portfolio/03-apartamento-interior.jpg" },
-  { n: "008", title: "Moradia moderna com piscina", place: "Palmela", year: 2023, scope: "Exterior · 2 fachadas", img: "/portfolio/moradia-moderna-completa.jpg" },
+  {
+    n: "008", title: "Moradia moderna com piscina", place: "Palmela", year: 2023, scope: "Exterior · 2 fachadas",
+    img: "/portfolio/moradia-moderna-completa.jpg",
+    gallery: [
+      "/portfolio/04-moradia-moderna.jpg",
+      "/portfolio/moradia-moderna-piscina.jpg",
+    ],
+  },
   { n: "009", title: "Vivenda clássica", place: "Pinhal Novo", year: 2023, scope: "Fachada + Telhado", img: "/portfolio/05-moradia-amarela.jpg" },
   { n: "010", title: "Hall de entrada", place: "Alcochete", year: 2023, scope: "Interior", img: "/portfolio/06-hall-moderno.jpg" },
-] as const;
+];
 
 export const PROCESS_STEPS = [
   { n: "01", title: "Visita", body: "Vamos a sua casa, ouvimos o que pretende. Sem custo, sem compromisso." },
