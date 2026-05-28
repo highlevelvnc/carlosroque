@@ -62,9 +62,19 @@ export default function Lightbox({
       </div>
 
       {/* Image */}
-      <div className="relative flex-1 flex items-center justify-center px-4 sm:px-12" onClick={(e) => e.stopPropagation()}>
-        <div className="relative w-full max-w-6xl aspect-[16/10]">
-          <Image src={img.src} alt={img.title} fill className="object-contain" sizes="100vw" priority />
+      <div className="relative flex-1 flex items-center justify-center px-4 sm:px-12 min-h-0" onClick={(e) => e.stopPropagation()}>
+        <div className="relative w-full h-full max-w-6xl max-h-full flex items-center justify-center">
+          <Image
+            key={img.src}
+            src={img.src}
+            alt={img.title}
+            width={1600}
+            height={1200}
+            className="max-w-full max-h-full w-auto h-auto object-contain rounded"
+            sizes="100vw"
+            priority
+            unoptimized={false}
+          />
         </div>
 
         <button
