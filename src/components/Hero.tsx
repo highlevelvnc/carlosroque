@@ -31,7 +31,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-[1600px] mx-auto w-full px-6 lg:px-12 pt-40">
+      <div className="max-w-[1600px] mx-auto w-full px-6 lg:px-12 pt-40 lg:pt-52">
         {/* top meta line */}
         <div
           data-reveal data-reveal-delay="100"

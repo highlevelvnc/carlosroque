@@ -43,9 +43,9 @@ function Header() {
   return (
     <header className="absolute top-0 inset-x-0 z-20 text-white">
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-transparent pointer-events-none" />
-      <div className="relative max-w-[1600px] mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+      <div className="relative max-w-[1600px] mx-auto px-6 lg:px-12 h-24 lg:h-36 flex items-center justify-between">
         <Link href="/v2" className="flex items-center gap-3">
-          <Image src="/carlosroque.png" alt={COMPANY.name} width={320} height={160} className="h-12 w-auto object-contain" style={{ filter: "drop-shadow(0 4px 18px rgba(0,0,0,0.55)) drop-shadow(0 0 2px rgba(255,255,255,0.6))" }} priority />
+          <Image src="/carlosroque.png" alt={COMPANY.name} width={480} height={240} className="h-12 lg:h-28 w-auto object-contain" style={{ filter: "drop-shadow(0 4px 18px rgba(0,0,0,0.55)) drop-shadow(0 0 2px rgba(255,255,255,0.6))" }} priority />
         </Link>
         <nav className="hidden lg:flex items-center gap-10 text-sm">
           {NAV_LINKS.map((l) => (

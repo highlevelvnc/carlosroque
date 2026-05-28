@@ -106,9 +106,9 @@ export default function V3Page() {
 function Header() {
   return (
     <header className="fixed top-0 inset-x-0 z-30 bg-[#0F2433]/90 backdrop-blur-xl border-b border-white/10">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 lg:h-32 flex items-center justify-between">
         <Link href="/v3" className="flex items-center gap-3">
-          <Image src="/carlosroque.png" alt={COMPANY.name} width={320} height={160} className="h-11 w-auto object-contain" style={{ filter: "brightness(1.4) contrast(1.05) drop-shadow(0 2px 10px rgba(79,184,201,0.4))" }} priority />
+          <Image src="/carlosroque.png" alt={COMPANY.name} width={480} height={240} className="h-11 lg:h-24 w-auto object-contain" style={{ filter: "brightness(1.4) contrast(1.05) drop-shadow(0 2px 10px rgba(79,184,201,0.4))" }} priority />
           <div className="hidden md:inline-flex items-center text-[10px] uppercase tracking-[0.2em] text-[#4FB8C9]/80 border-l border-white/15 pl-3">
             desde {COMPANY.founded}
           </div>
@@ -128,7 +128,7 @@ function Header() {
 
 function Hero() {
   return (
-    <section className="relative pt-28 lg:pt-32 pb-16 lg:pb-24 overflow-hidden bg-[#0F2433]">
+    <section className="relative pt-28 lg:pt-44 pb-16 lg:pb-24 overflow-hidden bg-[#0F2433]">
       {/* Ambient glow */}
       <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl pointer-events-none" style={{ background: "radial-gradient(circle, #4FB8C9 0%, transparent 70%)" }} />
 

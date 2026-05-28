@@ -20,14 +20,14 @@ export default function Header() {
         scrolled ? "bg-[#0E0E10]/85 backdrop-blur-xl border-b border-[#2A2A2F]" : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 lg:h-32 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3 group">
           <Image
             src="/carlosroque.png"
             alt={COMPANY.name}
             width={320}
             height={160}
-            className="h-10 sm:h-12 w-auto object-contain transition group-hover:scale-[1.02]"
+            className="h-10 sm:h-12 lg:h-24 w-auto object-contain transition group-hover:scale-[1.02]"
             style={{ filter: "brightness(1.35) contrast(1.05) drop-shadow(0 2px 12px rgba(79,184,201,0.35))" }}
             priority
           />
