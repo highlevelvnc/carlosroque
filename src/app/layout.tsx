@@ -74,10 +74,10 @@ export const metadata: Metadata = {
       "Pintura interior e exterior em Alcochete, Margem Sul e Lisboa. 15+ anos, 312 obras, garantia escrita até 5 anos. Orçamento grátis em 48h.",
     images: [
       {
-        url: "/portfolio/hero-cozinha.jpeg",
+        url: "/og-image.jpg",
         width: 1200,
-        height: 800,
-        alt: "Cozinha pintada pela Carlos Roque Pinturas",
+        height: 630,
+        alt: "Carlos Roque Pinturas — Pinturas que duram",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${COMPANY.name} — Pinturas que duram`,
     description: "Pintura interior e exterior em Alcochete, Margem Sul e Lisboa.",
-    images: ["/portfolio/hero-cozinha.jpeg"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -100,10 +100,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/carlosroque.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/carlosroque.png", type: "image/png", sizes: "320x213" },
     ],
-    apple: "/carlosroque.png",
+    apple: { url: "/apple-icon.png", sizes: "180x180" },
+    shortcut: "/favicon.ico",
   },
   category: "Construção · Pintura",
   formatDetection: { telephone: true, address: true, email: true },
@@ -125,7 +126,7 @@ const jsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/carlosroque.png`,
   image: [
-    `${SITE_URL}/portfolio/hero-cozinha.jpeg`,
+    `${SITE_URL}/og-image.jpg`,
     `${SITE_URL}/portfolio/sandro-lisboa-1.jpg`,
     `${SITE_URL}/portfolio/predios-completo.jpg`,
   ],
@@ -191,6 +192,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-PT" className={`${fraunces.variable} ${geist.variable} ${geistMono.variable}`}>
       <head>
         <link rel="canonical" href={SITE_URL} />
+        {/* Preconnect a CDNs externos críticos */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* DNS prefetch WhatsApp para CTA mais rápido */}
+        <link rel="dns-prefetch" href="https://wa.me" />
+        {/* Preload da foto do hero — LCP image */}
+        <link rel="preload" as="image" href="/portfolio/hero-cozinha.jpeg" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -89,6 +89,7 @@ export const PROJECTS: readonly Project[] = [
     gallery: [
       "/portfolio/sandro-lisboa-1.jpg",
       "/portfolio/sandro-lisboa-2.jpg",
+      "/portfolio/sandro-lisboa-3.jpg",
     ],
   },
   {
@@ -99,12 +100,6 @@ export const PROJECTS: readonly Project[] = [
       "/portfolio/maje-lisboa-2.jpg",
       "/portfolio/maje-lisboa-3.jpg",
       "/portfolio/maje-lisboa-4.jpg",
-      "/portfolio/maje-lisboa-5.jpg",
-      "/portfolio/maje-lisboa-6.jpg",
-      "/portfolio/maje-lisboa-7.jpg",
-      "/portfolio/maje-lisboa-8.jpg",
-      "/portfolio/maje-lisboa-9.jpg",
-      "/portfolio/maje-lisboa-10.jpg",
     ],
   },
   {
