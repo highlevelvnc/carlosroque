@@ -8,8 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // Páginas internas de proposta — não indexar
-        disallow: ["/escolha", "/v2", "/v3"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
